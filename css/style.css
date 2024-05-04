@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Primary blue #1363df */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+}
+body {
+    scroll-behavior: smooth;
+}
+
+/* TOGGLER */
+.toggler {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border: none !important;
+}
+.toggler:focus {
+    border: none !important;
+    outline: none;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+.toggler span {
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: rgb(69, 235, 69);
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.toggler span:nth-child(1) {
+    transform: translateY(-10px);
+    width: 15px;
+    left: 10px;
+}
+.toggler.active span:nth-child(1) {
+    width: 20px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.125s;
+}
+.toggler span:nth-child(2) {
+    transform: translateY(10px);
+    width: 10px;
+    left: 10px;
+}
+.toggler.active span:nth-child(2) {
+    width: 20px;
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: 0.25s;
+}
+.toggler.active span:nth-child(3) {
+    transform: translateX(60px);
+}
+/* HOME */
+.hero-home {
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+        url(../assets/background/background1.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-position: center !important;
+}
+.book:hover {
+    background: hsla(0, 0%, 89%, .5);
+}
+.icon {
+    font-size: 3rem !important;
+}
+.fa-star .icon {
+    color: yellow;
+}
+.fa-heart .icon {
+    color: red;
+}
+.fa-bowl-food .icon {
+    color: rgb(77, 253, 77);
+}
+.fa-peso-sign .icon {
+    color: #0f1f38;
+}
+.event {
+    max-height: 500px !important;
+}
+.feature {
+    background: #e6e6e6;
+}
+.icon-container {
+    background: #d3d3d3;
+}
+/* ABOUT */
+.hero-about {
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+        url(../assets/background/background.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-position: center !important;
+}
+.about {
+    width: 50%;
+}
+.menu-icon {
+    font-size: 3rem;
+}
+.person-icon {
+    height: auto;
+    width: 50px !important;
+}
+/* SERVICES */
+.beef, .pork, .chicken, .seafoods, .soup, .vegetables, .appetizer, .pasta, .desserts, .salad, .beverages {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    color: white;
+    background-size: contain;
+}
+.beef {
+    background: url(../assets/img/services/beef.jpg);
+}
+.pork {
+    background: url(../assets/img/services/pork.jpg);
+}
+.chicken {
+    background: url(../assets/img/services/chicken.jpg);;
+}
+.seafoods {
+    background: url(../assets/img/services/seafood.jpg);
+}
+.soup {
+    background: url(../assets/img/services/soup.jpg);
+}
+.vegetables {
+    background: url(../assets/img/services/vegetable.jpg);
+}
+.appetizer {
+    background: url(../assets/img/services/appetizer.jpg);;
+}
+.pasta {
+    background: url(../assets/img/services/pasta.jpg);
+}
+.desserts {
+    background: url(../assets/img/services/dessert.jpg);
+}
+.salad {
+    background: url(../assets/img/services/salad.jpg);;
+}
+.beverages {
+    background: url(../assets/img/services/beverage.jpg);
+}
+/* OFFERS */
+.offers {
+    width: 50%;
+}
+.price-box {
+    transition: all ease .8s;
+    border: 1px solid grey;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.price-box:hover {
+    transition: all ease .8s;
+    transform: scale(1.1);
+    border: 1px solid greenyellow;
+}
+.fa-square-check {
+    color: greenyellow;
+}
+.book-button {
+    background: rgb(77, 253, 77);
+}
+.book-button:hover {
+    background: rgb(69, 235, 69);
+}
+/* CONTACT */
+.contact-left {
+    min-width: 50%;
+}
+/* FORMS */
+.red {
+    color: red;
+}
+.button-bg {
+    background: #323232;
+}
+.button-bg:hover {
+    background: #222222;
+}
+.form-control {
+    outline: none;
+    box-shadow: none;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #000;
+}
+.hero-offer {
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+        url(../assets/background/background2.jpg) !important;
+}
+/* FOOTER */
+.footer {
+    background: linear-gradient(hsla(0, 0%, 90%, 25%), hsla(0, 0%, 30%, 75%)),
+        url(../assets/img/drinks.jpg);
+    object-fit: cover;
+    position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fa-brands {
+    font-size: 1.3rem !important;
+}
+.fa-brand:hover {
+    color: #0f1f38;
+}
+
+@media only screen and (max-width: 600px) {
+    /* HOME */
+    .icon {
+        font-size: 2rem !important;
+    }
+    /* ABOUT */
+    .about {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* ABOUT */
+    .person-icon {
+        height: auto;
+        width: 50px !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* ABOUT */
+    .person-icon {
+        height: auto;
+        width: 50px !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
