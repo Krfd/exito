@@ -29,32 +29,31 @@
         </div>
     </div>
     <div class="py-3 py-md-5 px-0 px-md-5 d-flex flex-column flex-column-reverse flex-md-row justify-content-center gap-3 gap-md-5">
-        <div class="py-3 py-lg-5">
-            <img src="./assets/img/cater2.jpg" alt="Cater" class="rounded-1 shadow w-100 d-block mx-auto object-fit-cover" />
-        </div>
-        <div class="p-5 p-md-3 p-lg-5">
-            <h2 class="fw-semibold">Menu</h2>
-            <div class="mt-3">
-                <i class="fa-solid fa-bowl-food menu-icon"></i>
-                <span>Dinner</span>
-                <br />
-                <small>Top occasion and event of all time. Discover our
-                    best deals and packages here.</small>
-            </div>
-            <div class="mt-3">
-                <i class="fa-solid fa-bowl-rice menu-icon"></i>
-                <span>Lunch</span>
-                <br />
-                <small>Experience our afternoon time service for your
-                    special events with quality dishes.</small>
-            </div>
-            <div class="mt-3">
-                <i class="fa-solid fa-plate-wheat menu-icon"></i>
-                <span>Breakfast</span>
-                <br />
-                <small>Breakfast dishes are also available in our packages
-                    of your choice.</small>
-            </div>
+        <div class="container p-5 p-md-3 p-lg-5">
+            <h1 class="fw-semibold text-center text-uppercase">What we offer</h1>
+            <hr>
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
+                <img src="assets/img/events/birthday.jpg" alt="Birthday Image" class="object-fit-cove event-image col-12 col-md-6">
+                    <div class="col-12 col-md-6">
+                        <h2 class="fw-bold">Birthdays</h2>
+                        <p class="para">Birthday celebrations are special occasions marking the anniversary of your birth. Enjoy together through gatherings with your close friends and family with Exito Catering Services.</p>
+                    </div>
+                </div>
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
+                    <img src="assets/img/events/christening.jpg" alt="Christening Image" class="object-fit-cove event-image col-12 col-md-6">
+                    <div class="col-12 col-md-6">
+                        <h2 class="fw-bold">Christening</h2>
+                        <p class="para">Christenings are significant events for families, symbolizing their commitment to raising the child. 
+                            As you celebrate the baptism of your child, we are here to serve you.</p>
+                    </div>
+                </div>
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
+                    <img src="assets/img/events/wedding.jpg" alt="Birthday Image" class="object-fit-cove event-image">
+                    <div class="para">
+                        <h2 class="fw-bold">Wedding</h2>
+                        <p>Celebrate the union of your marriage with us! even in your weddings, we are happy to serve you and bring your reception into a memorable and exciting celebration.</p>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="py-3 py-md-5 px-0 px-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-5">

@@ -101,7 +101,7 @@ body {
 /* ABOUT */
 .hero-about {
     background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
-        url(../assets/background/background.jpg) !important;
+        url(../assets/background/background.jpeg) !important;
     background-repeat: no-repeat !important;
     background-size: cover;
     background-attachment: fixed;
@@ -109,57 +109,39 @@ body {
     background-position: center !important;
 }
 .about {
-    width: 50%;
+    width: 100%;
 }
-.menu-icon {
-    font-size: 3rem;
+.para {
+    font-size: 20px;
 }
 .person-icon {
     height: auto;
     width: 50px !important;
 }
 /* SERVICES */
-.beef, .pork, .chicken, .seafoods, .soup, .vegetables, .appetizer, .pasta, .desserts, .salad, .beverages {
-    background-position: center;
-    background-repeat: no-repeat;
+.hero-services {
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+        url(../assets/background/background2.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
     background-attachment: fixed;
     object-fit: cover;
-    color: white;
-    background-size: contain;
+    background-position: center !important;
 }
-.beef {
-    background: url(../assets/img/services/beef.jpg);
+.dish {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    max-height: 300px;
+    min-height: 300px;
 }
-.pork {
-    background: url(../assets/img/services/pork.jpg);
+.dish-desc {
+    position: absolute;
 }
-.chicken {
-    background: url(../assets/img/services/chicken.jpg);;
+.dish-name {
+    font-size: 2rem;
 }
-.seafoods {
-    background: url(../assets/img/services/seafood.jpg);
-}
-.soup {
-    background: url(../assets/img/services/soup.jpg);
-}
-.vegetables {
-    background: url(../assets/img/services/vegetable.jpg);
-}
-.appetizer {
-    background: url(../assets/img/services/appetizer.jpg);;
-}
-.pasta {
-    background: url(../assets/img/services/pasta.jpg);
-}
-.desserts {
-    background: url(../assets/img/services/dessert.jpg);
-}
-.salad {
-    background: url(../assets/img/services/salad.jpg);;
-}
-.beverages {
-    background: url(../assets/img/services/beverage.jpg);
-}
+
 /* OFFERS */
 .offers {
     width: 50%;

@@ -24,9 +24,10 @@
         <i class="fa-solid fa-message"></i>
     </div>
 </div>
+-->
 <script>
     let menuToggle = document.querySelector(".toggler");
     menuToggle.onclick = function() {
         menuToggle.classList.toggle("active");
     };
-</script> -->
+</script>

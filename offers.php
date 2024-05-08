@@ -18,6 +18,17 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-4 p-3 p-md-4 p-md-5">
+
+        </div>
+        <div class="col-12 col-md-4 p-3 p-md-4 p-md-5">
+
+        </div>
+        <div class="col-12 col-md-4 p-3 p-md-4 p-md-5">
+            
+        </div>
+    </div>
     <div class="container-fluid my-3 my-md-5 py-5">
         <h2 class="fw-semibold text-center">Party Events</h2>
         <div class="container mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center flex-md-row mx-auto gap-3 gap-md-4 gap-lg-5">
