@@ -12,8 +12,8 @@
 <body>
     <?php include("layout/navbar.php") ?>
     <div class="container-fluid py-5 hero-about">
-        <div class="container mt-5 pt-5">
-            <h1 class="fw-bold text-white text-center">
+        <div class="container my-5 pt-5">
+            <h1 class="fw-bold text-white text-center display-1">
                 Premier Catering Service
             </h1>
             <div class="text-white mt-5 pt-5 about">
@@ -36,22 +36,28 @@
                 <img src="assets/img/events/birthday.jpg" alt="Birthday Image" class="object-fit-cove event-image col-12 col-md-6">
                     <div class="col-12 col-md-6">
                         <h2 class="fw-bold">Birthdays</h2>
+                        <hr>
                         <p class="para">Birthday celebrations are special occasions marking the anniversary of your birth. Enjoy together through gatherings with your close friends and family with Exito Catering Services.</p>
+                        <a href="" class="text-decoration-none rounded-5 px-3 py-2 fw-semibold book-button text-white">View deals</a>
                     </div>
                 </div>
                 <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
                     <img src="assets/img/events/christening.jpg" alt="Christening Image" class="object-fit-cove event-image col-12 col-md-6">
                     <div class="col-12 col-md-6">
                         <h2 class="fw-bold">Christening</h2>
+                        <hr>
                         <p class="para">Christenings are significant events for families, symbolizing their commitment to raising the child. 
-                            As you celebrate the baptism of your child, we are here to serve you.</p>
+                            As you celebrate their baptism, we are here to serve you.</p>
+                            <a href="" class="text-decoration-none rounded-5 px-3 py-2 fw-semibold book-button text-white">View deals</a>
                     </div>
                 </div>
                 <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
-                    <img src="assets/img/events/wedding.jpg" alt="Birthday Image" class="object-fit-cove event-image">
-                    <div class="para">
+                    <img src="assets/img/events/wedding.jpg" alt="Wedding Image" class="object-fit-cove event-image col-12 col-md-6">
+                    <div>
                         <h2 class="fw-bold">Wedding</h2>
-                        <p>Celebrate the union of your marriage with us! even in your weddings, we are happy to serve you and bring your reception into a memorable and exciting celebration.</p>
+                        <hr>
+                        <p class="para">Celebrate the union of your marriage with us! even in your weddings, we are happy to serve you and bring your reception into a memorable and exciting celebration.</p>
+                        <a href="" class="text-decoration-none rounded-5 px-3 py-2 fw-semibold book-button text-white">View deals</a>
                     </div>
                 </div>
         </div>
@@ -61,7 +67,7 @@
             <h2 class="fw-semibold">Schedule an appointment?</h2>
             <div class="mt-3">
                 <p>You can set a schedule for a meeting <br> or consultation more information.</p>
-                <a href="contact.php" class="text-decoration-none text-white rounded-5 px-3 py-1 text-uppercase button-bg">Contact Us</a>
+                <a href="contact.php" class="text-decoration-none text-white rounded-5 px-3 py-2 text-uppercase book-button">Contact Us</a>
             </div>
         </div>
         <div class="py-3 py-lg-5">

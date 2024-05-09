@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: roboto;
+    font-family: roboto, 'san-serif';
 }
 body {
     scroll-behavior: smooth;
@@ -63,7 +63,7 @@ body {
 }
 /* HOME */
 .hero-home {
-    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, .5)),
         url(../assets/background/background1.jpg) !important;
     background-repeat: no-repeat !important;
     background-size: cover;
@@ -71,23 +71,11 @@ body {
     object-fit: cover;
     background-position: center !important;
 }
-.book:hover {
-    background: hsla(0, 0%, 89%, .5);
+.green {
+    color: rgb(77, 253, 77);
 }
 .icon {
     font-size: 3rem !important;
-}
-.fa-star .icon {
-    color: yellow;
-}
-.fa-heart .icon {
-    color: red;
-}
-.fa-bowl-food .icon {
-    color: rgb(77, 253, 77);
-}
-.fa-peso-sign .icon {
-    color: #0f1f38;
 }
 .event {
     max-height: 500px !important;
@@ -96,14 +84,41 @@ body {
     background: #e6e6e6;
 }
 .icon-container {
-    background: #d3d3d3;
+    background: linear-gradient(0deg, #141414 ,#e6e6e6);
+}
+.light {
+    color: #e6e6e6;
+}
+.grey {
+    color: rgb(199, 199, 199);
+}
+.ingredients {
+    background-color: #141414;
+}
+.ingredient-img {
+    width: 50%;
+}
+.chef {
+    background: linear-gradient(0deg, #e6e6e6, #363636, #141414);
+}
+.chef .para {
+    font-size: 20px;
+}
+.discover {
+    background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
+        url(../assets/img/home/2.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-position: center !important;
 }
 /* ABOUT */
 .hero-about {
     background: linear-gradient(hsla(0, 0%, 0%, .5), hsla(0, 0%, 13%, 0.25)),
-        url(../assets/background/background.jpeg) !important;
+        url(../assets/background/background.jpg) !important;
     background-repeat: no-repeat !important;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     object-fit: cover;
     background-position: center !important;
@@ -170,15 +185,6 @@ body {
     min-width: 50%;
 }
 /* FORMS */
-.red {
-    color: red;
-}
-.button-bg {
-    background: #323232;
-}
-.button-bg:hover {
-    background: #222222;
-}
 .form-control {
     outline: none;
     box-shadow: none;
@@ -194,7 +200,7 @@ body {
 }
 /* FOOTER */
 .footer {
-    background: linear-gradient(hsla(0, 0%, 90%, 25%), hsla(0, 0%, 30%, 75%)),
+    background: linear-gradient(hsla(0, 0%, 13%, 0.5), hsla(0, 0%, 13%, .25)),
         url(../assets/img/drinks.jpg);
     object-fit: cover;
     position: center;

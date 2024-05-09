@@ -190,7 +190,7 @@
                 <hr>
                 <div class="features">
                     <h6 class="fw-bold">Top Feature</h6>
-                    <i class="fa-solid fa-square-check"></i> 100 Maximum guests capacity <br>
+                    <i class="fa-solid fa-square-check"></i> 120 Maximum guests capacity <br>
                     <i class="fa-solid fa-square-check"></i> 16 Delicious Dishes <br>
                     <i class="fa-solid fa-square-check"></i> 5 Desserts <br>
                     <i class="fa-solid fa-square-check"></i> 4 Assorted Beverages <br>

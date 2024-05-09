@@ -12,8 +12,12 @@
 <body>
     <?php include("layout/navbar.php") ?>
     <div class="container-fluid hero-services py-5">
-        <div class="container text-center py-5">
-            <h1 class="fw-semibold text-white">Our Kitchen</h1>
+        <div class="container text-center my-5 py-5">
+            <h1 class="fw-semibold text-white display-1">Our Kitchen</h1>
+            <div class="text-white mt-5 pt-5 services">
+                <h4 class="fw-bold">What we serve?</h4>
+                <p class="fw-light">We serve different foods on different events such as Birthday, Wedding, Christening, Festivals, and many more. Exito has served countless events since its deliciously indulging foods became popular for most Ilonggos. They serve multiple best tasting foods from local to luxury dishes.</p>
+            </div>
         </div>
     </div>
     <div class="d-flex flex-column flex-md-row gap-0">
