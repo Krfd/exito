@@ -223,6 +223,10 @@ body {
     .about {
         width: 100%;
     }
+    /* SERVICES */
+    .dish-img {
+        min-height: 50%;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
