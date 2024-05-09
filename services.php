@@ -13,10 +13,71 @@
     <?php include("layout/navbar.php") ?>
     <div class="container-fluid hero-services py-5">
         <div class="container text-center my-5 py-5">
-            <h1 class="fw-semibold text-white display-1">Our Kitchen</h1>
+            <h1 class="fw-semibold text-white display-1"><span class="green">Our</span> Kitchen</h1>
             <div class="text-white mt-5 pt-5 services">
-                <h4 class="fw-bold">What we serve?</h4>
-                <p class="fw-light">We serve different foods on different events such as Birthday, Wedding, Christening, Festivals, and many more. Exito has served countless events since its deliciously indulging foods became popular for most Ilonggos. They serve multiple best tasting foods from local to luxury dishes.</p>
+                <h3 class="fw-bold">What we serve?</h3>
+                <p class="fw-light para">We serve different foods on different events such as Birthday, Wedding, Christening, Festivals, and many more. Exito has served countless events since its deliciously indulging foods became popular for most Ilonggos. They serve multiple best tasting foods from local to luxury dishes.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark">
+        <div class="py-3 py-md-5">
+            <div class="main container d-flex flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5">
+                <div class="col">
+                    <h1 class="fw-bold text-white"><span class="green">Main</span> Dish</h1>
+                    <hr class="text-white">
+                    <p class="light">
+                        Exito Catering Services offers you a lot of dishes to choose for your special occasion. Discover the most requested dish in almost every occasion and
+                        experience the taste of our best tasting dishes in Iloilo City. With our unique way of cooking our food, we also have different ingredients that will satisfy and fulfill your cravings.
+                    </p>
+                    <hr class="text-white">
+                    <div class="d-flex gap-3">
+                        <img src="assets/img/services/main/4.jpeg" alt="Beef" style="height: 100px" class="w-25 object-fit-cover flex-fill">
+                        <img src="assets/img/services/main/5.jpeg" alt="Beef" style="height: 100px" class="w-25 object-fit-cover flex-fill">
+                        <img src="assets/img/services/main/6.jpeg" alt="Beef" style="height: 100px" class="w-25 object-fit-cover flex-fill">
+                    </div>
+                </div>
+                <div class="col d-flex flex-column flex-md-row gap-3">
+                    <div>
+                        <img src="assets/img/services/main/1.jpeg" alt="Beef" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                    <div>
+                        <img src="assets/img/services/main/2.jpeg" alt="Beef" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                    <div>
+                        <img src="assets/img/services/main/3.jpeg" alt="Beef" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3 py-md-5">
+            <div class="side container d-flex flex-column-reverse flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5">
+                <div class="col d-flex flex-column flex-md-row gap-3">
+                    <div>
+                        <img src="assets/img/services/side/1.jpg" alt="Pasta" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                    <div>
+                        <img src="assets/img/services/side/2.jpg" alt="Soup" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                    <div>
+                        <img src="assets/img/services/side/3.jpg" alt="Salad" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
+                    </div>
+                </div>
+                <div class="col">
+                    <h1 class="fw-bold text-white"><span class="green">Side</span> Dish</h1>
+                    <hr class="text-white">
+                    <p class="light">
+                        Your experience with us will never be enough without having our indulging and flavorful side dishes and beverages. For our side dish, we serve quality desserts, pasta, soup, appetizer, salad, vegetables, and many more.
+                        Almost every simple and luxurious dishes in Iloilo is here and to ensure that we serve you the best of these foods, don't hesitate to try it for you to find out.
+                    </p>
+                    <hr class="text-white">
+                    <div class="d-flex gap-3">
+                        <img src="assets/img/services/side/4.jpg" alt="" style="height: 100px" class="w-25 object-fit-cover flex-fill dish-img-sm">
+                        <img src="assets/img/services/side/5.jpg" alt="" style="height: 100px" class="w-25 object-fit-cover flex-fill dish-img-sm">
+                        <img src="assets/img/services/side/6.jpg" alt="" style="height: 100px" class="w-25 object-fit-cover flex-fill dish-img-sm">
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
