@@ -14,7 +14,7 @@
     <div class="container-fluid py-5 hero-about">
         <div class="container my-5 pt-5">
             <h1 class="fw-bold text-white text-center display-1">
-                Premier Catering Service
+                <span class="green">Premier</span> Catering Service
             </h1>
             <div class="text-white mt-5 pt-5 about">
                 <h4 class="fw-bold">Who we are?</h4>

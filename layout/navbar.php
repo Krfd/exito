@@ -1,9 +1,6 @@
 <nav class="navbar navbar-expand-sm px-1 py-3 shadow">
     <div class="container-fluid">
         <a href="./home.php"><img src="./assets/logo.jpg" alt="Logo" class="logo" style="width: 50px"></a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
         <button class="toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span></span>
             <span></span>
@@ -19,12 +16,6 @@
         </div>
     </div>
 </nav>
-<!-- <div class="floating-container">
-    <div class="floating-button">
-        <i class="fa-solid fa-message"></i>
-    </div>
-</div>
--->
 <script>
     let menuToggle = document.querySelector(".toggler");
     menuToggle.onclick = function() {

@@ -14,10 +14,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
     <title>Contact</title>
 
     <!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Sweet Alert 2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <?php include("layout/header.php") ?>
 </head>
 
@@ -88,7 +85,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                     popup: "colored-toast",
                 },
                 showConfirmButton: false,
-                timer: 10000,
+                timer: 1000,
                 timerProgressBar: true,
             });
 
