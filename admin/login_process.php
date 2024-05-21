@@ -20,7 +20,7 @@ $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'For login', $key);
 
 try {
-    $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE email = :email");
     $stmt->bindParam(":email", $email);
     $stmt->execute();
 

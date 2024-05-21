@@ -11,6 +11,7 @@
 
 <body>
     <?php include("layout/navbar.php") ?>
+    <?php include("layout/bot.php") ?>
     <div class="container-fluid hero-home py-5">
         <div class="container text-center py-5 my-5">
             <h1 class="fw-semibold text-white display-1">
@@ -34,9 +35,9 @@
                 <p><i>Indulge a memorable experience with the people you
                         love.</i></p>
             </div>
-            <div class="d-block d-lg-flex justify-content-evenly align-items-baseline my-5 py-3">
+            <div class="d-block d-lg-flex justify-content-evenly align-items-baseline my-5 py-3" data-aos="fade-up">
                 <div class="text-center">
-                <img src="./assets/img/casual.jpg" alt="Corporate Event" class="object-fit-cover event" />
+                <img src="./assets/img/casual.jpg" alt="Corporate Event" class="object-fit-cover event"/>
                     
                     <div class="content mt-3 d-block mx-auto w-50">
                         <h4 class="w-medium">Party Events</h4>
@@ -45,7 +46,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5 md-md-0">
-                <img src="./assets/img/partyy.jpg" alt="Party Event" class="object-fit-cover event" />
+                <img src="./assets/img/partyy.jpg" alt="Party Event" class="object-fit-cover event"/>
                     <div class="content mt-3 d-block mx-auto w-75">
                         <h4 class="w-medium">Corporate Events</h4>
                         <p class="text-secondary">Enjoy our corporate package with various and
@@ -53,7 +54,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5 md-md-0">
-                    <img src="./assets/img/wedding.jpg" alt="Wedding Event" class="object-fit-cover event" />
+                    <img src="./assets/img/wedding.jpg" alt="Wedding Event" class="object-fit-cover event"/>
                     <div class="content mt-3 d-block mx-auto w-50">
                         <h4 class="w-medium">Wedding Events</h4>
                         <p class="text-secondary">We cater quality wedding event package with
@@ -64,7 +65,7 @@
         </div>
     </div>
     <div class="container-fluid icon-container py-5">
-        <div class="container d-flex flex-column flex-md-row gap-5 gap-md-3 justify-content-evenly align-items-center">
+        <div class="container d-flex flex-column flex-md-row gap-5 gap-md-3 justify-content-evenly align-items-center py-5">
             <div class="text-center grey">
                 <i class="fa-solid fa-star icon"></i>
                 <br><br>
@@ -93,7 +94,7 @@
     </div>
     
     <div class="ingredients text-center py-5 light">
-        <div class="container my-3 py-5">
+        <div class="container my-3 py-5" data-aos="fade-up">
         <h2 class="fw-bold display-4">The Best Ingredients</h2>
         <p>We take an enormous amount of pride in sourcing our ingredients carefully to ensure that the flavors of our food are as delicious and authentic as possible. 
            <br> We're only able to achieve this level of excellence by putting an extra care into our menu items that is difficult to find at other restaurant.
@@ -119,7 +120,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5 discover">
+    <div class="container-fluid py-5 discover" data-aos="fade-up">
         <div class="container p-5 text-center light">
             <h2 class="fw-semibold display-4">
                 Discover
@@ -128,7 +129,8 @@
         </div>
     </div>
     <?php include("layout/footer.php") ?>
-
+    <?php include("layout/script.php") ?>
+    <script src="layout/index.js"></script>
 </body>
 
 </html>

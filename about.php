@@ -11,6 +11,7 @@
 
 <body>
     <?php include("layout/navbar.php") ?>
+    <?php include("layout/bot.php") ?>
     <div class="container-fluid py-5 hero-about">
         <div class="container my-5 pt-5">
             <h1 class="fw-bold text-white text-center display-1">
@@ -32,8 +33,8 @@
         <div class="container p-5 p-md-3 p-lg-5">
             <h1 class="fw-semibold text-center text-uppercase">What we offer</h1>
             <hr>
-                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
-                <img src="assets/img/events/birthday.jpg" alt="Birthday Image" class="object-fit-cove event-image col-12 col-md-6">
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5" data-aos="fade-up">
+                    <img src="assets/img/events/birthday.jpg" alt="Birthday Image" class="object-fit-cove event-image col-12 col-md-6">
                     <div class="col-12 col-md-6">
                         <h2 class="fw-bold">Birthdays</h2>
                         <hr>
@@ -41,7 +42,7 @@
                         <a href="" class="text-decoration-none rounded-5 px-3 py-2 fw-semibold book-button text-white">View deals</a>
                     </div>
                 </div>
-                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5" data-aos="fade-up">
                     <img src="assets/img/events/christening.jpg" alt="Christening Image" class="object-fit-cove event-image col-12 col-md-6">
                     <div class="col-12 col-md-6">
                         <h2 class="fw-bold">Christening</h2>
@@ -51,9 +52,9 @@
                             <a href="" class="text-decoration-none rounded-5 px-3 py-2 fw-semibold book-button text-white">View deals</a>
                     </div>
                 </div>
-                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5">
+                <div class="p-3 p-md-5 d-flex flex-column flex-md-row gap-3 gap-md-5" data-aos="fade-up">
                     <img src="assets/img/events/wedding.jpg" alt="Wedding Image" class="object-fit-cove event-image col-12 col-md-6">
-                    <div>
+                    <div class="col-12 col-md-6">
                         <h2 class="fw-bold">Wedding</h2>
                         <hr>
                         <p class="para">Celebrate the union of your marriage with us! even in your weddings, we are happy to serve you and bring your reception into a memorable and exciting celebration.</p>
@@ -87,7 +88,7 @@
     </div>
 
     <div class="container-fluid py-5">
-        <div class="container py-5">
+        <div class="container py-5" data-aos="zoom-in-up">
             <h2 class="fw-bold text-center text-uppercase">What our customers say?</h2>
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-5">
                 <div class="col-12 col-md-4 mx-auto p-3 p-lg-5 rounded-3 shadow mt-3 mt-lg-0">
@@ -121,6 +122,7 @@
         </div>
     </div>
     <?php include("layout/footer.php") ?>
+    <?php include("layout/script.php") ?>
+    <script src="layout/index.js"></script>
 </body>
-
 </html>

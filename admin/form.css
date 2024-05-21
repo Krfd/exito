@@ -5,6 +5,12 @@ body, html {
   * {
     box-sizing: border-box;
   }
+
+  .green {
+    color: rgb(77, 253, 77);
+  }
+
+  /* LOGIN */
   
   .bg-image {
     /* The image used */
@@ -40,17 +46,23 @@ body, html {
   .form {
     width: 80%;
   }
-  .form-control {
-    background: transparent;
+  .red {
+    color: red;
+  }
+  .form-input {
+    width: 100%;
+  }
+  .form-input:focus {
     outline: none;
     border: none;
     box-shadow: none;
   }
-  .form-control:focus {
-    outline: none;
-    border: 1px solid black;
-    box-shadow: none;
-  }
+
+  /* SIGNUP */
+.blue:hover {
+  color: cornflowerblue;
+}
+
   @media only screen and (max-width: 600px) {
    .bg-form {
     width: 80%;

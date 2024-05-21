@@ -46,7 +46,7 @@ include("csrfToken.php");
                     <label for="time">Time</label>
                 </div>
                 <div class="form-floating col-12 col-md-3 mt-3">
-                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="50,000" readonly>
+                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="50000" readonly>
                     <label for="price">Price</label>
                 </div>
             </div>

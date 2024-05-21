@@ -12,10 +12,11 @@ $price = htmlspecialchars($_POST['price']);
 $message = htmlspecialchars($_POST['message']);
 $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'CSRF Booking Token', $key);
+$status = "Pending";
 
     if(hash_equals($token, $_POST['token'])) {
         
-        $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message)");
+        $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :status)");
         $book->bindParam(':name', $name);
         $book->bindParam(':phone', $phone);
         $book->bindParam(':email', $email);
@@ -24,6 +25,7 @@ $token = hash_hmac('sha256', 'CSRF Booking Token', $key);
         $book->bindParam(':event_time', $time);
         $book->bindParam(':price', $price);
         $book->bindParam(':message', $message);
+        $book->bindParam(':status', $status);
         $book->execute();
 
         if($book == TRUE) {

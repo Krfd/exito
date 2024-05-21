@@ -9,7 +9,7 @@
 <body>
     <?php include("layout/navbar.php") ?>
     <div class="container-fluid py-5 hero-offer">
-        <div class="container py-5">
+        <div class="container py-5 my-5">
             <h1 class="fw-semibold text-white text-center">Our <span class="green">Best</span> Deals</h1>
             <div class="pt-5 text-white offers">
                 <h4 class="fw-bold">Looking for more offers?</h4>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid my-5 py-3">
+    <div class="container-fluid my-5 py-3" data-aos="fade-up">
         <h2 class="fw-semibold text-center">Birthday Events</h2>
         <div class="container mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center flex-md-row mx-auto gap-5 gap-md-4 gap-lg-5">
             <div class="col p-3 p-md-4 p-lg-5 rounded-3 shadow-sm price-box">
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid my-5 py-3">
+    <div class="container-fluid my-5 py-3" data-aos="fade-up">
         <h2 class="fw-semibold text-center">Party Events</h2>
         <div class="container mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center flex-md-row mx-auto gap-5 gap-md-4 gap-lg-5">
             <div class="col p-3 p-md-4 p-lg-5 rounded-3 shadow-sm price-box">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid my-5 py-3">
+    <div class="container-fluid my-5 py-3" data-aos="fade-up">
         <h2 class="fw-semibold text-center">Corporate Events</h2>
         <div class="container mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center flex-md-row mx-auto gap-5 gap-md-4 gap-lg-5">
             <div class="col p-3 p-md-4 p-lg-5 rounded-3 shadow-sm price-box">
@@ -186,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid my-5 py-3">
+    <div class="container-fluid my-5 py-3" data-aos="fade-up">
         <h2 class="fw-semibold text-center">Wedding Events</h2>
         <div class="container mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center flex-md-row mx-auto gap-5 gap-md-4 gap-lg-5">
             <div class="col p-3 p-md-4 p-lg-5 rounded-3 shadow-sm price-box">
@@ -245,3 +245,4 @@
 <?php include("layout/footer.php") ?>
 </body>
 </html>
+<?php include("layout/script.php") ?>

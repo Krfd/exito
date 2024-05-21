@@ -13,13 +13,12 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
 
-    <!-- JQuery -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <?php include("layout/header.php") ?>
 </head>
 
 <body>
     <?php include("layout/navbar.php") ?>
+    <?php include("layout/bot.php") ?>
     <div class="container-fluid py-5 my-5">
         <div class="container d-flex flex-column flex-md-row justify-content-evenly align-items-center">
             <div class="contact-left">
@@ -64,10 +63,11 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
             </div>
         </div>
         <div class="container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5544.426471895551!2d122.563479342513!3d10.695743714818656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1714572587981!5m2!1sen!2sph" width="600" height="450" style="border:0; width: 100%" allowfullscreen="" class="py-5 px-3 px-md-0 d-block mx-auto" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52657.1499493657!2d122.56654859065625!3d11.204935068250709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33af6c519dcd3371%3A0xde59c9ba142284ac!2sBingawan%2C%20Iloilo!5e0!3m2!1sen!2sph!4v1716254346001!5m2!1sen!2sph" width="600" height="450" style="border:0; width: 100%" class="py-5 px-3 px-md-0 d-block mx-auto" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     <?php include("layout/footer.php") ?>
+    <script src="layout/index.js"></script>
 </body>
 
 </html>

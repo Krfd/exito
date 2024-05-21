@@ -11,6 +11,7 @@
 
 <body>
     <?php include("layout/navbar.php") ?>
+    <?php include("layout/bot.php") ?>
     <div class="container-fluid hero-services py-5">
         <div class="container text-center my-5 py-5">
             <h1 class="fw-semibold text-white display-1"><span class="green">Our</span> Kitchen</h1>
@@ -22,7 +23,7 @@
     </div>
     <div class="bg-dark">
         <div class="py-3 py-md-5">
-            <div class="main container d-flex flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5">
+            <div class="main container d-flex flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5" data-aos="fade-up">
                 <div class="col">
                     <h1 class="fw-bold text-white"><span class="green">Main</span> Dish</h1>
                     <hr class="text-white">
@@ -51,7 +52,7 @@
             </div>
         </div>
         <div class="py-3 py-md-5">
-            <div class="side container d-flex flex-column-reverse flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5">
+            <div class="side container d-flex flex-column-reverse flex-column flex-md-row justify-content-center gap-5 my-3 my-md-5 py-5" data-aos="fade-up">
                 <div class="col d-flex flex-column flex-md-row gap-3">
                     <div>
                         <img src="assets/img/services/side/1.jpg" alt="Pasta" style="height: 100%" class="w-100 object-fit-cover dish-img d-block mx-auto">
@@ -158,7 +159,7 @@
             </a>
         </div>
         <div class="col-12 col-md-4">
-            <a href="paste.php" class="text-decoration-none text-white">
+            <a href="pasta.php" class="text-decoration-none text-white">
                 <div class="dish-desc p-3 p-lg-5 text-white">
                 <h2 class="dish-name">Pasta</h2>
                 <small class="txet-white">We serve creamy <br> pasta you can seek.</small>
@@ -201,6 +202,7 @@
         </div>
     </div>
     <?php include("layout/footer.php") ?>
+    <?php include("layout/script.php") ?>
+    <script src="layout/index.js"></script>
 </body>
-
 </html>
