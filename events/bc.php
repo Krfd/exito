@@ -46,7 +46,7 @@ include("csrfToken.php");
                     <label for="time">Time</label>
                 </div>
                 <div class="form-floating col-12 col-md-3 mt-3">
-                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="25,000" readonly>
+                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="25000" readonly>
                     <label for="price">Price</label>
                 </div>
             </div>
@@ -98,6 +98,17 @@ include("csrfToken.php");
                                 icon: "error",
                                 title: "Booked Unsuccessfully",
                                 text:"Unavailable preferred date and time",
+                                confirmButtonColor: "#EB5546",
+                                confirmButtonText: "Try Again",
+                            }).then(() => {
+                                window.location.href = "bc.php";
+                            })
+                        break;
+                        case "invalidTime": 
+                        Swal.fire({
+                                icon: "error",
+                                title: "Invalid date and time.",
+                                text:"It is advisable to book few days before the event.",
                                 confirmButtonColor: "#EB5546",
                                 confirmButtonText: "Try Again",
                             }).then(() => {

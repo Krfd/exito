@@ -433,8 +433,18 @@ body {
     background-image: url(../assets/background/drinks.jpg);
 }
 
-
-
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 30px;
+}
+::-webkit-scrollbar-track {
+    background: #CECEFE;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 50px;
+}
 
 @media only screen and (max-width: 600px) {
     /* HOME */

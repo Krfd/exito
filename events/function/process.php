@@ -14,8 +14,10 @@ $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'CSRF Booking Token', $key);
 $status = "Pending";
 
-    if(hash_equals($token, $_POST['token'])) {
-        
+if(hash_equals($token, $_POST['token'])) {
+    if($date < date("M. d, Y") || $time < date("h:i:s")) {
+        echo "invalidTime";
+    } else {
         $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :status)");
         $book->bindParam(':name', $name);
         $book->bindParam(':phone', $phone);
@@ -33,6 +35,7 @@ $status = "Pending";
         } else {
             echo "invalid";
         }
-    } else {
-        echo "invalidcsrf";
     }
+} else {
+    echo "invalidcsrf";
+}

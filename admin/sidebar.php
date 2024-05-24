@@ -9,22 +9,34 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="requests.php" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#requests" aria-expanded="false" aria-controls="requests">
-                        <i class="fa-solid fa-bell-concierge icon"></i>
+                    <a href="requests.php" class="sidebar-link">
+                    <i class="fa-solid fa-bell-concierge icon"></i>
                         <span>Requests</span>
                     </a>
-                    <ul id="requests" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="pending.php" class="sidebar-link">Pending</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="approved.php" class="sidebar-link">Approved</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="declined.php" class="sidebar-link">Declined</a>
-                        </li>
-                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="pending.php" class="sidebar-link">
+                        <i class="fa-solid fa-clock icon"></i>
+                        <span>Pending</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="approved.php" class="sidebar-link">
+                    <i class="fa-solid fa-user-check icon"></i>
+                        <span>Approved</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="declined.php" class="sidebar-link">
+                    <i class="fa-solid fa-ban icon"></i>
+                        <span>Declined</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="clients.php" class="sidebar-link">
+                    <i class="fa-solid fa-user-plus icon"></i>
+                        <span>Clients</span>
+                    </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="appointment.php" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
@@ -37,7 +49,7 @@
                             <a href="app_meeting.php" class="sidebar-link">Meeting</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="app_declined" class="sidebar-link">Declined</a>
+                            <a href="app_declined.php" class="sidebar-link">Declined</a>
                         </li>
                     </ul>
                 </li>

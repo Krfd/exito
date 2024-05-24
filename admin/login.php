@@ -23,7 +23,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Sweet Alert 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
 </head>
 <body>
     <div class="bg-image"></div>
@@ -39,7 +38,9 @@
     <input type="email" name="email" id="email" class="form-input rounded-3 border-0 ps-2 py-2 mt-1" autocomplete="off" style="width: 100%" required>
     <label for="password" class="mt-3">Password <span class="red">*</span></label> <br>
     <input type="password" name="password" id="password" class="form-input rounded-3 border-0 ps-2 py-2 mt-1" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="width: 100%" required>
-    <input type="checkbox" class="mt-3 fw-light" onclick="showPass()"> Show Password <br>
+    <div class="mt-3">
+    <input type="checkbox" class="fw-light form-check-input" onclick="showPass()"> Show Password
+    </div>
     <button class="btn btn-primary text-uppercase my-3 d-block mx-auto w-100" name="login" type="submit">Login</button>
     <p>Don't have an account? <a href="signup.php" class="text-decoration-none text-white blue">Signup</a></p>
 </form>
@@ -67,7 +68,7 @@
                                         confirmButtonColor: "#67CC65",
                                         confirmButtonText: "Continue",
                                     }).then(() => {
-                                        window.location.href = "index.php"
+                                        window.location.href = "pending.php"
                                     })
                             break;
                             case "invalid": 

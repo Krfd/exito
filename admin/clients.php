@@ -18,7 +18,7 @@ include("../config.php");
     <div class="wrapper">
         <?php include("sidebar.php"); ?>
         <div class="main px-5 py-3">
-            <h1 class="fw-bold display-1">Approved Reservation</h1>
+            <h1 class="fw-bold display-1">Client Records</h1>
             <hr>
             <div class="table-responsive">
                 <table class="table table-hover table-striped">
@@ -31,14 +31,12 @@ include("../config.php");
                             <th>No. Guests</th>
                             <th>Schedule</th>
                             <th>Price</th>
-                            <th>Message</th>
                             <th>Status</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            $res = $conn->prepare("SELECT * FROM reservation WHERE status = 'Approved'");
+                            $res = $conn->prepare("SELECT * FROM reservation WHERE status = 'Done'");
                             $res->execute();
 
                             $book = $res->fetchAll(PDO::FETCH_ASSOC);
@@ -51,7 +49,6 @@ include("../config.php");
                                     $email = $req['email'];
                                     $guests = $req['guests'];
                                     $price = $req['price'];
-                                    $message = $req['message'];
                                     $status = $req['status'];
 
                                     $day = date('M. d, Y - D', strtotime($day = $req['event_date']));
@@ -66,15 +63,13 @@ include("../config.php");
                                         <td>'.$guests.'</td>
                                         <td>'.$hr . '<span class="ms-3">'. $day .' </span> '.'</td>
                                         <td>'.$price.'</td>
-                                        <td>'.$message.'</td>
-                                        <td><span class="badge bg-primary">'.$status.'</span></td>
-                                        <td><a href="#" class="text-white done" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-check-to-slot"></i></button></a></td>
+                                        <td><span class="badge bg-success">'.$status.'</span></td>
                                     </tr>';
                                 }
                             } else {
                                 echo 
                                 '<tr>
-                                    <td colspan="10" class="text-center"><i>No Pending Request</i></td>
+                                    <td colspan="10" class="text-center"><i>No finished transaction.</i></td>
                                 </tr>';
                             }
                         ?>
@@ -85,9 +80,6 @@ include("../config.php");
     </div>
     <script src="js/script.js"></script>
     <script src="js/time.js"></script>
-    <script src="js/approve.js"></script>
-    <script src="js/decline.js"></script>
-    <script src="js/done.js"></script>
     <?php include("layout/script.php"); ?>
 </body>
 

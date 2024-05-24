@@ -4,7 +4,7 @@ include("connect.php");
 if (isset($_GET['id'])) {
     $res_id = $_GET['id'];
 
-    // Query for declining reservation
+    // Query for restoring reservation
     $query_res = "SELECT * FROM reservation WHERE id = $res_id";
     $res = $conn->query($query_res);
 
@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
         $id = $row['id'];
     }
 
-    $reserve = "UPDATE reservation SET is_declined = 1, status = 'Declined' WHERE id = $id";
+    $reserve = "UPDATE reservation SET is_approve = 0, status = 'Done' WHERE id = $id";
     $conn->exec($reserve);
 
     echo "success";

@@ -9,7 +9,6 @@ $password = "";
 try {
     $conn = new PDO($db, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
@@ -32,11 +31,11 @@ try {
                 if($password = $getRow['password']){
                 $_SESSION['id'] = $getRow['id'];
                     echo "success";
-                } else {
+                }
+                else {
                     echo "invalid";
                 }
             }
-            echo "invalid";
         }
         else {
             // echo "no account";

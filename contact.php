@@ -128,6 +128,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                     }
                 },
             });
+            return false;
         });
     });
 </script>

@@ -20,7 +20,7 @@ include("../config.php");
         <div class="main px-5 py-3">
             <h1 class="fw-bold display-1">Pending Reservation</h1>
             <hr>
-            <div class="table-responsive">
+            <div class="table-responsive h-100">
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
@@ -67,7 +67,7 @@ include("../config.php");
                                         <td>'.$price.'</td>
                                         <td>'.$message.'</td>
                                         <td class="dropdown">
-                                        <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">'.$status.'</button>
+                                        <button type="button" class="btn btn-sm btn-warning text-white dropdown-toggle" data-bs-toggle="dropdown">'.$status.'</button>
                                             <div class="dropdown-menu">
                                                 <li class="px-1">
                                                     <button type="button" class="btn btn-sm rounded text-center bg-primary dropdown-item"><a href="#" class="text-white text-center text-decoration-none approve_req" data-id='.$id.'>Approve</a></button>

@@ -17,6 +17,7 @@ $name = htmlspecialchars($_POST['name']);
 $phone = htmlspecialchars($_POST['phone']);
 $date = htmlspecialchars($_POST['date']);
 $time = htmlspecialchars($_POST['time']);
+$time = date("H:i", strtotime($time));
 $email = htmlspecialchars($_POST['email']);
 $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'this is for contact', $key);

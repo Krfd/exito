@@ -57,7 +57,7 @@ include("../config.php");
                                     $day = date('M. d, Y - D', strtotime($day = $req['event_date']));
                                     $hr = date('h:i A', strtotime($hr = $req['event_time']));
 
-                                    echo 
+                                    echo
                                     '<tr>
                                         <td>'.$id.'</td>
                                         <td>'.$name.'</td>
@@ -67,17 +67,17 @@ include("../config.php");
                                         <td>'.$hr . '<span class="ms-3">'. $day .' </span> '.'</td>
                                         <td>'.$price.'</td>
                                         <td>'.$message.'</td>
-                                        <td>'.$status.'</td>
+                                        <td><span class="badge bg-danger">'.$status.'</span></td>
                                         <td>
-                                        <button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                        <a href="#" class="restore text-white" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button></a>
+                                        <a href="#" class="delete text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
                                         </td>
                                     </tr>';
                                 }
                             } else {
                                 echo 
                                 '<tr>
-                                    <td colspan="10" class="text-center"><i>No Pending Request</i></td>
+                                    <td colspan="10" class="text-center"><i>No Declined Request.</i></td>
                                 </tr>';
                             }
                         ?>
@@ -88,8 +88,8 @@ include("../config.php");
     </div>
     <script src="js/script.js"></script>
     <script src="js/time.js"></script>
-    <script src="js/approve.js"></script>
-    <script src="js/decline.js"></script>
+    <script src="js/restore.js"></script>
+    <script src="js/delete.js"></script>
     <?php include("layout/script.php"); ?>
 </body>
 

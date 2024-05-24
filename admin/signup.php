@@ -51,7 +51,9 @@
             <input type="password" name="confirm" id="confirm" class="form-input password-field rounded-3 border-0 ps-2 py-2 mt-1" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="width: 100%" required>
         </div>
    </div>
-    <input type="checkbox" class="mt-3 fw-light" onclick="showPass()"> Show Password <br>
+    <div class="mt-3">
+        <input type="checkbox" class="form-check-input fw-light" onclick="showPass()"> Show Password
+    </div>
     <button class="btn btn-primary text-uppercase my-3 d-block mx-auto w-100" name="login" type="submit">Signup</button>
     <p>Already have an account? <a href="login.php" class="text-decoration-none text-white blue">Login</a></p>
 </form>
@@ -87,6 +89,17 @@
                                         icon: "error",
                                         title: "Invalid email or password",
                                         text:"Please check your email or password",
+                                        confirmButtonColor: "#EB5546",
+                                        confirmButtonText: "Try Again",
+                                    }).then(() => {
+                                        window.location.href = "signup.php"
+                                    })
+                            break;
+                            case "exists": 
+                            Swal.fire({
+                                        icon: "error",
+                                        title: "You already signed up",
+                                        text:"Continue to login",
                                         confirmButtonColor: "#EB5546",
                                         confirmButtonText: "Try Again",
                                     }).then(() => {

@@ -20,15 +20,15 @@ include("csrfToken.php");
         <input type="hidden" name="token" value="<?php echo $token ?>">
             <div class="row">
                 <div class="form-floating col-12 col-md-4 mt-3">
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off" required>
                     <label for="name">Name</label>
                 </div>
                 <div class="form-floating col-12 col-md-4 mt-3">
-                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone" minlength="11" maxlength="11" required>
+                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone" minlength="11" maxlength="11" autocomplete="off" required>
                     <label for="phone">Phone</label>
                 </div>
                 <div class="form-floating col-12 col-md-4 mt-3">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off" required>
                     <label for="email">Email</label>
                 </div>
             </div>
@@ -38,19 +38,19 @@ include("csrfToken.php");
                     <label for="gusts">No. of guests</label>
                 </div>
                 <div class="form-floating col-12 col-md-3 mt-3">
-                    <input type="date" name="date" id="date" class="form-control" placeholder="Date" required>
+                    <input type="date" name="date" id="date" class="form-control" placeholder="Date" autocomplete="off" required>
                     <label for="date">Date</label>
                 </div>
                 <div class="form-floating col-12 col-md-3 mt-3">
-                    <input type="time" name="time" id="time" class="form-control" placeholder="Time" required>
+                    <input type="time" name="time" id="time" class="form-control" placeholder="Time" autocomplete="off" required>
                     <label for="time">Time</label>
                 </div>
                 <div class="form-floating col-12 col-md-3 mt-3">
-                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="25,000" readonly>
+                    <input type="price" name="price" id="price" class="form-control" placeholder="Price" value="25000" readonly>
                     <label for="price">Price</label>
                 </div>
             </div>
-            <textarea name="message" id="message" class="form-control mt-3" placeholder="You may enter your preferred main and side dishes here..."></textarea>
+            <textarea name="message" id="message" class="form-control mt-3" placeholder="You may enter your preferred main and side dishes here..." autocomplete="off"></textarea>
             <button type="submit" class="btn btn-success mt-3 w-100" name="submit">Book Now</button>
         </form>
         <div class="py-3 py-md-5 px-md-3 px-lg-5 col-12 col-lg-4">
@@ -101,6 +101,17 @@ include("csrfToken.php");
                                 confirmButtonText: "Try Again",
                             }).then(() => {
                                 window.location.href = "wc.php"
+                            })
+                        break;
+                        case "invalidTime": 
+                        Swal.fire({
+                                icon: "error",
+                                title: "Invalid date and time.",
+                                text:"It is advisable to book few days before the event.",
+                                confirmButtonColor: "#EB5546",
+                                confirmButtonText: "Try Again",
+                            }).then(() => {
+                                window.location.href = "bc.php";
                             })
                         break;
                         case "invalidcsrf":
