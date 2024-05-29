@@ -1,13 +1,14 @@
 $(document).ready(function () {
-    $(".restore_app").click(function (e) {
+    $(".delete_sched").click(function (e) {
         e.preventDefault();
-        var app_id = $(this).attr("data-id");
+        var res_id = $(this).attr("data-id");
 
         Swal.fire({
-            title: "Restore this schedule?",
+            title: "Remove this record?",
+            text: "You can restore this record when done.",
             icon: "question",
             showCancelButton: true,
-            confirmButtonText: "Restore",
+            confirmButtonText: "Remove",
             confirmButtonColor: "#45eb45",
             cancelButtonText: "Cancel",
             cancelButtonColor: "#dc3545",
@@ -15,8 +16,8 @@ $(document).ready(function () {
             if (result.isConfirmed) {
                 $.ajax({
                     type: "GET",
-                    url: "./functions/restore_sched.php",
-                    data: { id: app_id },
+                    url: "./functions/delete_sched.php",
+                    data: { id: res_id },
                     success: function (response) {
                         const Toast = Swal.mixin({
                             toast: true,
@@ -33,7 +34,7 @@ $(document).ready(function () {
                             case "success":
                                 Toast.fire({
                                     icon: "success",
-                                    title: "Schedule has been restored.",
+                                    title: "Deleted Successfully.",
                                     iconColor: "#28a745",
                                 }).then(() => {
                                     var delay = 100;
@@ -45,7 +46,7 @@ $(document).ready(function () {
                             case "error":
                                 Toast.fire({
                                     icon: "error",
-                                    title: "can't restore schedule. Please try again.",
+                                    title: "Can't delete record. Please try again.",
                                     iconColor: "#dc3545",
                                 }).then(() => {
                                     location.reload();
@@ -54,7 +55,7 @@ $(document).ready(function () {
                             default:
                                 Toast.fire({
                                     icon: "error",
-                                    title: "something went wrong!",
+                                    title: "Something went wrong",
                                     iconColor: "#dc3545",
                                 }).then(() => {
                                     location.reload();

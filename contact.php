@@ -85,7 +85,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                     popup: "colored-toast",
                 },
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 10000,
                 timerProgressBar: true,
             });
 
@@ -96,7 +96,6 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                 success: function(response) {
                     switch (response) {
                         case "success":
-                            // login
                             Toast.fire({
                                 icon: "success",
                                 title: "Successfully sent!",
@@ -106,7 +105,6 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                             });
                             break;
                         case "invalidcsrf":
-                            // no csrf
                             Toast.fire({
                                 icon: "error",
                                 title: "Invalid Token",
@@ -115,8 +113,27 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                                 window.location = "contact.php";
                             });
                             break;
+                        case "full":
+                            Toast.fire({
+                                icon: "error",
+                                title: "Schedule is full!",
+                                text: "Please enter another day or time.",
+                            }).then(() => {
+                                window.location = "contact.php";
+                            });
+                            break;
+                        case "invalidTimestamp": 
+                            Toast.fire({
+                                    icon: "error",
+                                    title: "Invalid date.",
+                                    text:"It is recommended to schedule a meeting ahead of time.",
+                                    confirmButtonColor: "#EB5546",
+                                    confirmButtonText: "Try Again",
+                                }).then(() => {
+                                    window.location.href = "contact.php";
+                                })
+                            break;
                         default:
-                            // error
                             Toast.fire({
                                 icon: "error",
                                 title: response,

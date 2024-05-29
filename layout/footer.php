@@ -37,11 +37,24 @@
         <small class="text-center"><i>&copy; 2024. All Rights Reserved.</i></small>
         <hr class="text-white">
         <div>
-            <ul class="list-unstyled d-flex justify-content-evenly align-items-center text-uppercase">
-                <li class="list-item"><a href="home.php" class="text-decoration-none text-white">Home</a></li>
-                <li class="list-item"><a href="about.php" class="text-decoration-none text-white">About Us</a></li>
-                <li class="list-item"><a href="contact.php" class="text-decoration-none text-white">Contact</a></li>
-                <li class="list-item"><a href="support.php" class="text-decoration-none text-white">Support</a></li>
+            <ul class="list-unstyled d-flex justify-content-evenly align-items-center">
+                <li class="list-item text-uppercase"><a href="home.php" class="text-decoration-none text-white">Home</a></li>
+                <li class="list-item text-uppercase"><a href="about.php" class="text-decoration-none text-white">About Us</a></li>
+                <li class="list-item text-uppercase"><a href="contact.php" class="text-decoration-none text-white">Contact</a></li>
+                <li class="list-item text-uppercase"><a href="#" data-bs-toggle="modal" data-bs-target="#privacy" class="text-decoration-none text-white">Privacy</a></li>
+                <div class="modal fade" id="privacy">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fw-bold">Privacy Policy</h1>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><span class="fw-bold">Exito Catering Services</span> is commited to protecting your privacy. This privacy policy explains how your personal information is collected, used, and disclosed by the management. This privacy policy applies to our website, and its associated subdomains alongside our application. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this <span class="fw-bold">Privacy Policy</span> and <span class="fw-bold">Terms of Service</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </ul>
         </div>
     </div>

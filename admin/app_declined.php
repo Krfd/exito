@@ -36,7 +36,7 @@ include("../config.php");
                     </thead>
                     <tbody>
                         <?php
-                            $res = $conn->prepare("SELECT * FROM reservation WHERE status = 'Declined'");
+                            $res = $conn->prepare("SELECT * FROM meeting WHERE is_declined = 1");
                             $res->execute();
 
                             $book = $res->fetchAll(PDO::FETCH_ASSOC);
@@ -46,36 +46,33 @@ include("../config.php");
                                     $id = $req['id'];
                                     $name = $req['name'];
                                     $phone = $req['phone'];
+                                    $day = $req['day'];
                                     $email = $req['email'];
-                                    $guests = $req['guests'];
-                                    $price = $req['price'];
-                                    $message = $req['message'];
-                                    $status = $req['status'];
+                                    $inquired = $req['created'];
 
-                                    $day = date('M. d, Y - D', strtotime($day = $req['event_date']));
-                                    $hr = date('h:i A', strtotime($hr = $req['event_time']));
+                                    $day = date('M. d, Y - D', strtotime($day = $req['day']));
+                                    $hr = date('h:i A', strtotime($hr = $req['time_slot']));
+                                    $inquired = date('M. d, Y - h:i A');
 
                                     echo
                                     '<tr>
                                         <td>'.$id.'</td>
                                         <td>'.$name.'</td>
                                         <td>'.$phone.'</td>
+                                        <td>'.$day.'</td>
+                                        <td>'.$hr.'</td>
                                         <td>'.$email.'</td>
-                                        <td>'.$guests.'</td>
-                                        <td>'.$hr . '<span class="ms-3">'. $day .' </span> '.'</td>
-                                        <td>'.$price.'</td>
-                                        <td>'.$message.'</td>
-                                        <td><span class="badge bg-danger">'.$status.'</span></td>
+                                        <td>'.$inquired.'</td>
                                         <td>
-                                        <a href="#" class="restore text-white" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button></a>
-                                        <a href="#" class="delete text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
+                                        <a href="#" class="restore_app text-white" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button></a>
+                                        <a href="#" class="delete_app text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
                                         </td>
                                     </tr>';
                                 }
                             } else {
                                 echo 
                                 '<tr>
-                                    <td colspan="10" class="text-center"><i>No Declined Request.</i></td>
+                                    <td colspan="10" class="text-center"><i>No declined schedule of meeting.</i></td>
                                 </tr>';
                             }
                         ?>
@@ -90,5 +87,4 @@ include("../config.php");
     <script src="js/app_delete.js"></script>
     <?php include("layout/script.php"); ?>
 </body>
-
 </html>

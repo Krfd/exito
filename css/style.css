@@ -435,14 +435,14 @@ body {
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
-    width: 30px;
+    width: 15px;
 }
 ::-webkit-scrollbar-track {
     background: #CECEFE;
     border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb {
-    background: grey;
+    background: lightgreen;
     border-radius: 50px;
 }
 

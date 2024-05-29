@@ -21,21 +21,34 @@ $time = date("H:i", strtotime($time));
 $email = htmlspecialchars($_POST['email']);
 $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'this is for contact', $key);
+// $date = date("M. d, Y", strtotime($date));
 
 try {
     if(hash_equals($token, $_POST['csrfToken'])) {
-        $insert = $conn->prepare("INSERT INTO meeting (name, phone, day, time_slot, email) VALUES (:name, :phone, :day, :time_slot, :email)");
-        $insert->bindParam(":name", $name);
-        $insert->bindParam(":phone", $phone);
-        $insert->bindParam(":day", $date);
-        $insert->bindParam(":time_slot", $time);
-        $insert->bindParam(":email", $email);
-        $insert->execute();
-
-        if($insert == TRUE) {
-            echo "success";
+        // Error
+        if($date < date("M. d, Y")) {
+            echo "invalidTimestamp";
         } else {
-            echo "invalid";
+            $val = $conn->prepare("SELECT * FROM meeting WHERE day = $date AND is_declined = 0");
+            $val->execute();
+
+            if($val->rowCount() > 1) {
+                echo "full";
+            } else {
+                $insert = $conn->prepare("INSERT INTO meeting (name, phone, day, time_slot, email) VALUES (:name, :phone, :day, :time_slot, :email)");
+                $insert->bindParam(":name", $name);
+                $insert->bindParam(":phone", $phone);
+                $insert->bindParam(":day", $date);
+                $insert->bindParam(":time_slot", $time);
+                $insert->bindParam(":email", $email);
+                $insert->execute();
+
+                if($insert == TRUE) {
+                    echo "success";
+                } else {
+                    echo "invalid";
+                }
+            }
         }
     } else {
         echo "invalidcsrf";

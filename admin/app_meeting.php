@@ -52,8 +52,8 @@ include("../config.php");
                                     $created = $req['created'];
 
                                     $date = date('M. d, Y - D', strtotime($date));
-                                    $time = date('H:i A', strtotime($time));
-                                    $created = date('M. d, Y - H:i A, D', strtotime($created));
+                                    $time = date('h:i A', strtotime($time));
+                                    $created = date('M. d, Y - h:i A', strtotime($created));
                                     echo
                                     '<tr>
                                         <td>'.$id.'</td>
@@ -64,8 +64,7 @@ include("../config.php");
                                         <td>'.$email.'</td>
                                         <td>'.$created.'</td>
                                         <td>
-                                        <a href="#" class="restore text-white" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button></a>
-                                        <a href="#" class="delete text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
+                                        <a href="#" class="delete_sched text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
                                         </td>
                                     </tr>';
                                 }
@@ -83,7 +82,7 @@ include("../config.php");
     </div>
     <script src="js/script.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/delete_sched.js"></script>
     <?php include("layout/script.php"); ?>
 </body>
-
 </html>

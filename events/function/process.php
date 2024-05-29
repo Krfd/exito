@@ -14,28 +14,33 @@ $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'CSRF Booking Token', $key);
 $status = "Pending";
 
-if(hash_equals($token, $_POST['token'])) {
-    if($date < date("M. d, Y") || $time < date("h:i:s")) {
-        echo "invalidTime";
-    } else {
-        $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :status)");
-        $book->bindParam(':name', $name);
-        $book->bindParam(':phone', $phone);
-        $book->bindParam(':email', $email);
-        $book->bindParam(':guests', $guests);
-        $book->bindParam(':event_date', $date);
-        $book->bindParam(':event_time', $time);
-        $book->bindParam(':price', $price);
-        $book->bindParam(':message', $message);
-        $book->bindParam(':status', $status);
-        $book->execute();
-
-        if($book == TRUE) {
-            echo "success";
+try {
+    if(hash_equals($token, $_POST['token'])) {
+        // Error
+        if($date < date("M. d, Y")) {
+            echo "invalidTime";
         } else {
-            echo "invalid";
+            $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :status)");
+            $book->bindParam(':name', $name);
+            $book->bindParam(':phone', $phone);
+            $book->bindParam(':email', $email);
+            $book->bindParam(':guests', $guests);
+            $book->bindParam(':event_date', $date);
+            $book->bindParam(':event_time', $time);
+            $book->bindParam(':price', $price);
+            $book->bindParam(':message', $message);
+            $book->bindParam(':status', $status);
+            $book->execute();
+
+            if($book == TRUE) {
+                echo "success";
+            } else {
+                echo "invalid";
+            }
         }
+    } else {
+        echo "invalidcsrf";
     }
-} else {
-    echo "invalidcsrf";
+} catch(PDOException $error) {
+    echo "error:" . $error->getMessage();
 }
