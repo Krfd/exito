@@ -17,7 +17,7 @@ $status = "Pending";
 try {
     if(hash_equals($token, $_POST['token'])) {
         // Error
-        if($date < date("M. d, Y")) {
+        if($date <= date("Y-m-d")) {
             echo "invalidTime";
         } else {
             $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :status)");

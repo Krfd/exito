@@ -85,7 +85,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                     popup: "colored-toast",
                 },
                 showConfirmButton: false,
-                timer: 10000,
+                timer: 1000,
                 timerProgressBar: true,
             });
 
@@ -113,11 +113,20 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                                 window.location = "contact.php";
                             });
                             break;
+                        case "unavailable":
+                            Toast.fire({
+                                icon: "error",
+                                title: "Unavailable time slot.",
+                                text: "Please select another day or time.",
+                            }).then(() => {
+                                window.location = "contact.php";
+                            });
+                            break;
                         case "full":
                             Toast.fire({
                                 icon: "error",
-                                title: "Schedule is full!",
-                                text: "Please enter another day or time.",
+                                title: "Schedule is full.",
+                                text: "Please select another time.",
                             }).then(() => {
                                 window.location = "contact.php";
                             });
