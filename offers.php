@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php include("layout/navbar.php") ?>
+    <?php include("layout/bot.php") ?>
     <div class="container-fluid py-5 hero-offer">
         <div class="container py-5 my-5">
             <h1 class="fw-semibold text-white text-center">Our <span class="green">Best</span> Deals</h1>
@@ -241,8 +242,8 @@
             </div>
         </div>
     </div>
-    
 <?php include("layout/footer.php") ?>
+<?php include("layout/script.php") ?>
+<?php include("layout/index.js") ?>
 </body>
 </html>
-<?php include("layout/script.php") ?>

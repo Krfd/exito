@@ -1,6 +1,6 @@
 var data= {
     chatinit:{
-        title: ["Hello! My name is James and I am your chatbot assistance", "How can I help you?"],
+        title: ["Hello! My name is <span class='fw-bold'>James</span> and I am your chatbot assistance", "How can I help you?"],
         // options: ["Movies <span class='emoji'> &#128250;</span>","News","Shopping <span class='emoji'> &#128090;</span>","Music <span class='emoji'> &#127925;</span>"]
         options: ["Pricing 💰","Location","Services","Dishes 🍴"]
     },
@@ -73,6 +73,7 @@ function handleChat(){
     console.log(j);
     var elm= document.createElement("p");
     elm.innerHTML = data.chatinit.title[j];
+    elm.style.marginTop = "20px";
     elm.setAttribute("class","msg");
     cbot.appendChild(elm);
     j++;
