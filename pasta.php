@@ -176,6 +176,6 @@
     </div>
     <?php include("layout/footer.php") ?>
     <?php include("layout/script.php") ?>
-    <?php include("layout/index.js") ?>
+    <script src="layout/index.js"></script>
 </body>
 </html>

@@ -242,8 +242,8 @@
             </div>
         </div>
     </div>
-<?php include("layout/footer.php") ?>
-<?php include("layout/script.php") ?>
-<?php include("layout/index.js") ?>
+    <?php include("layout/footer.php") ?>
+    <?php include("layout/script.php") ?>
+    <script src="layout/index.js"></script>
 </body>
 </html>

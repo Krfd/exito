@@ -145,8 +145,7 @@ body {
     display: none;
 }
 .rep{
-    background: rgb(253,243,224);
-    color: lightslategray;
+    background: white;
     padding: 5px 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;

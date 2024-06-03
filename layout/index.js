@@ -1,7 +1,6 @@
 var data= {
     chatinit:{
         title: ["Hello! My name is <span class='fw-bold'>James</span> and I am your chatbot assistance", "How can I help you?"],
-        // options: ["Movies <span class='emoji'> &#128250;</span>","News","Shopping <span class='emoji'> &#128090;</span>","Music <span class='emoji'> &#127925;</span>"]
         options: ["Pricing 💰","Location","Services","Dishes 🍴"]
     },
     pricing: {
@@ -13,7 +12,7 @@ var data= {
     },
     
     location: {
-        title:["We are location is at "],
+        title:["We are located at Bingawan Mulapula Passi City, Iloilo"],
         options:["See location?"],
         url : {
             link:["https://maps.app.goo.gl/HY2djYPSJYEuMKHk9"]
@@ -21,8 +20,9 @@ var data= {
     },
     services: {
         title:["Exito Catering Services and Event Decorators offers a lot of services such as Birthday, Corporate events, Casual parties, Weddings, and more."],
+        options:["More"],
         url : {
-            link: []
+            link: ["services.php"]
         }
     },
     dishes: {
@@ -41,7 +41,6 @@ var len1= data.chatinit.title.length;
 
 // Show Chatbot
 function showChatBot(){
-    // console.log(this.innerText);
     var x = document.getElementById("icon");
     if(x.classList.contains("fa-message")){
         document.getElementById('test').style.display='block';
@@ -147,7 +146,7 @@ function handleResults(title,options,url){
         
     }
 }
-
+// Chatbot options / edit to remove the excess options
 function handleOptions(options,url){
     for(var i=0;i<options.length;i++){
         var opt= document.createElement("span");
@@ -157,14 +156,11 @@ function handleOptions(options,url){
         cbot.appendChild(opt);
     }
     var opt= document.createElement("span");
-    // var inp= '<a class="m-link" href="'+url.more+'">'+'See more</a>';
 
     const isObjectEmpty= (url)=>{
         return JSON.stringify(url)=== "{}";
     }
 
-    console.log(isObjectEmpty(url));
-    console.log(url);
     opt.innerHTML=inp;
     opt.setAttribute("class","opt link");
     cbot.appendChild(opt);

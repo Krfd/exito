@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php include("layout/navbar.php") ?>
+<?php include("layout/bot.php") ?>
 <div class="container-fluid hero hero-beef py-5">
         <div class="container p-5 text-center">
             <h1 class="fw-bold text-white display-1">
@@ -215,7 +216,8 @@
             </a>
         </div>
     </div>
-<?php include("layout/footer.php") ?>
+    <?php include("layout/footer.php") ?>
+    <?php include("layout/script.php") ?>
+    <script src="layout/index.js"></script>
 </body>
 </html>
-<?php include("layout/script.php") ?>
