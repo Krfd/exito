@@ -153,6 +153,7 @@ function handleOptions(options,url){
         var inp= '<a class="m-link" href="'+url.link[i]+'">'+options[i]+'</a>';
         opt.innerHTML=inp;
         opt.setAttribute("class","opt");
+        // Remove this to eliminate the other options
         cbot.appendChild(opt);
     }
     var opt= document.createElement("span");

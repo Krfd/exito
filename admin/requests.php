@@ -19,7 +19,6 @@ include("../config.php");
         <?php include("sidebar.php"); ?>
         <div class="main px-5 py-3">
             <h1 class="fw-bold display-1">Reservation</h1>
-            <hr>
             <div class="table-responsive h-100">
                 <table class="table table-hover table-striped">
                     <thead>

@@ -10,3 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
 <!-- Include jQuery from a CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- DATATABLES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap4.css" />

@@ -33,7 +33,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                             <input type="text" name="name" id="name" class="form-control rounded-3" placeholder="Name" required autocomplete="off" />
                             <label for="name">Name</label>
                         </div>
-                        <div class="col-12 col-md-6 form-floating">
+                        <div class="col-12 col-md-6 form-floating mt-3 mt-md-0">
                             <input type="tel" name="phone" id="phone" class="form-control rounded-3" placeholder="Phone" minlength="11" maxlength="11" required autocomplete="off"/>
                             <label for="phone">Phone</label>
                         </div>
@@ -43,7 +43,7 @@ $token = hash_hmac('sha256', 'this is for contact', $key);
                             <input type="date" name="date" id="date" class="form-control rounded-3" placeholder="Date" required autocomplete="off"/>
                             <label for="date">Date</label>
                         </div>
-                        <div class="col-12 col-md-6 form-floating">
+                        <div class="col-12 col-md-6 form-floating mt-3 mt-md-0">
                             <input type="time" name="time" id="time" class="form-control rounded-3" placeholder="Time" required autocomplete="off"/>
                             <label for="time">Time</label>
                         </div>

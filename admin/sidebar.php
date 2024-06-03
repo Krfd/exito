@@ -8,6 +8,7 @@
                 </div>
             </div>
             <ul class="sidebar-nav">
+            <hr class="sidebar-divider text-white">
                 <li class="sidebar-item">
                     <a href="requests.php" class="sidebar-link">
                     <i class="fa-solid fa-bell-concierge icon"></i>
@@ -38,6 +39,7 @@
                         <span>Clients</span>
                     </a>
                 </li>
+                <hr class="sidebar-divider text-white">
                 <li class="sidebar-item">
                     <a href="appointment.php" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#appointment" aria-expanded="false" aria-controls="appointment">
@@ -53,12 +55,14 @@
                         </li>
                     </ul>
                 </li>
+                <hr class="sidebar-divider text-white">
                 <li class="sidebar-item">
                     <a href="account.php" class="sidebar-link">
                         <i class="fa-solid fa-user-tie icon"></i>
                         <span>Account</span>
                     </a>
                 </li>
+                <hr class="sidebar-divider text-white">
             </ul>
             <div class="text-center mt-auto text-white mb-3">
                 <small id="date"></small>

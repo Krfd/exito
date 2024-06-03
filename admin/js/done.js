@@ -26,7 +26,7 @@ $(document).ready(function () {
                                 popup: "colored-toast",
                             },
                             showConfirmButton: false,
-                            timer: 10000,
+                            timer: 1000,
                             timerProgressBar: true,
                         });
 

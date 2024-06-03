@@ -21,8 +21,7 @@ include("../config.php");
         <?php include("sidebar.php"); ?>
         <div class="main px-5 py-3">
             <h1 class="fw-bold display-1">Account</h1>
-            <hr>
-            <div class="table-responsive">
+            <div class="table-responsive h-100">
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
@@ -113,6 +112,7 @@ include("../config.php");
     </div>
     
     <script src="js/script.js"></script>
+    <?php include("layout/script.php"); ?>
     <script>
         function showPassword() {
             var x = document.getElementsByClassName('pass');
@@ -189,7 +189,5 @@ include("../config.php");
                 });
             });
     </script>
-
-    <?php include("layout/script.php"); ?>
 </body>
 </html>

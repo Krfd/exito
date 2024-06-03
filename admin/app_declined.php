@@ -19,8 +19,7 @@ include("../config.php");
         <?php include("sidebar.php"); ?>
         <div class="main px-5 py-3">
             <h1 class="fw-bold display-1">Declined Meeting</h1>
-            <hr>
-            <div class="table-responsive">
+            <div class="table-responsive h-100">
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
@@ -65,7 +64,7 @@ include("../config.php");
                                         <td>'.$inquired.'</td>
                                         <td>
                                         <a href="#" class="restore_app text-white" data-id='.$id.'><button type="button" class="btn btn-success"><i class="fa-solid fa-recycle"></i></button></a>
-                                        <a href="#" class="delete_app text-white" data-id='.$id.'><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
+                                        <a href="#" class="delete_app text-white" data-id='.$id.'><button type="button" class="btn btn-danger mt-1 mt-lg-0"><i class="fa-solid fa-trash"></i></button></a>
                                         </td>
                                     </tr>';
                                 }
