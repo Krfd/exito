@@ -82,6 +82,17 @@
                                         window.location.href = "login.php"
                                     })
                             break;
+                            case "no account": 
+                                Swal.fire({
+                                        icon: "error",
+                                        title: "No account has been found.",
+                                        text:"Please register before logging in.",
+                                        confirmButtonColor: "#EB5546",
+                                        confirmButtonText: "Try Again",
+                                    }).then(() => {
+                                        window.location.href = "login.php"
+                                    })
+                            break;
                             case "invalidcsrf":
                             Swal.fire({
                                         icon: "error",

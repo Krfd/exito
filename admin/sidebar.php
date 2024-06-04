@@ -8,7 +8,7 @@
                 </div>
             </div>
             <ul class="sidebar-nav">
-            <hr class="sidebar-divider text-white">
+                <hr class="text-white">
                 <li class="sidebar-item">
                     <a href="requests.php" class="sidebar-link">
                     <i class="fa-solid fa-bell-concierge icon"></i>
@@ -70,7 +70,7 @@
                 <small id="time"></small>
             </div>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+                <a href="config.php?logout=true" class="sidebar-link">
                     <i class="fa-solid fa-right-from-bracket icon"></i>
                     <span>Logout</span>
                 </a>

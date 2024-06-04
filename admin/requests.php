@@ -1,6 +1,6 @@
 <?php
 
-include("../config.php");
+include("config.php");
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,6 @@ include("../config.php");
     <title>Admin Dashboard</title>
     <?php include("layout/header.php"); ?>
 </head>
-
 <body>
     <div class="wrapper">
         <?php include("sidebar.php"); ?>
@@ -51,6 +50,7 @@ include("../config.php");
                                     $price = $req['price'];
                                     $message = $req['message'];
                                     $status = $req['status'];
+                                    $updateModal = 'admin_' . $id;
 
                                     $day = date('M. d, Y - D', strtotime($day = $req['event_date']));
                                     $hr = date('h:i A', strtotime($hr = $req['event_time']));
@@ -80,9 +80,16 @@ include("../config.php");
                                         <td>'.$guests.'</td>
                                         <td>'.$hr . '<span class="ms-3">'. $day .' </span> '.'</td>
                                         <td>'.$price.'</td>
-                                        <td>'.$message.'</td>
-                                        '.$badge.'
+                                        <td>';
+                                        if($message == '' || $message == null) {
+                                            echo "Empty";
+                                        } else {
+                                            echo $message;
+                                        }
+                                        echo '</td>'.$badge.'
                                     </tr>';
+
+                                    echo '';
                                 }
                             } else {
                                 echo 

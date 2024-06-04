@@ -3,7 +3,7 @@
 $key = bin2hex(random_bytes(64));
 $token = hash_hmac('sha256', "for update", $key);
 
-include("../config.php");
+include("config.php");
 
 ?>
 <!DOCTYPE html>
@@ -28,8 +28,9 @@ include("../config.php");
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th colspan="2">Account Created</th>
+                            <th>Account Created</th>
                             <th>Updated</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,10 +48,12 @@ include("../config.php");
                                     $created = $acc['created'];
                                     $updated = $acc['updated'];
 
-                                    $day = date('M. d, Y - ', strtotime($created));
-                                    $hr = date('h:i A', strtotime($updated));
+                                    $created = date('M. d, Y - h:i A', strtotime($created));
+                                    $updated = date('M. d, Y - h:i A', strtotime($updated));
 
-                                    $created = $day . " ". $hr;
+                                    if($updated == $created) {
+                                        $updated = "No modification";
+                                    }
 
                                     echo 
                                     '<tr>
@@ -59,7 +62,13 @@ include("../config.php");
                                         <td>'.$email.'</td>
                                         <td>'.$created.'</td>
                                         <td>'.$updated.'</td>
-                                        <td><button type="button" class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button></td>
+                                        <td>';
+                                        if($id != $admin_id) {
+                                            echo '<button type="button" disabled class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button>';
+                                        } else {
+                                            echo '<button type="button" class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button>';
+                                        }
+                                        echo '</td>
                                     </tr>';
 
                                     echo 
@@ -88,7 +97,7 @@ include("../config.php");
                                                             <label for="confirm">Confirm Password</label>
                                                         </div>
                                                         <div class="mt-3">
-                                                            <input type="checkbox" onclick="showPassword()" class="form-check-input"/> Show Password
+                                                            <input type="checkbox" onclick="showPassword()" class="form-check-input ms-auto"/> <span class="ms-4">Show Password</span>
                                                         </div>
                                                         <button type="submit" name="update" class="btn btn-primary mt-3 w-100">Save</button>
                                                     </form>

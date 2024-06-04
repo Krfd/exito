@@ -29,16 +29,16 @@ try {
         if($stmt->rowCount() == 1) {
             if(password_verify($password, $getRow['password'])) {
                 if($password = $getRow['password']){
-                $_SESSION['id'] = $getRow['id'];
+                    $_SESSION['id'] = $getRow['id'];
                     echo "success";
-                }
-                else {
+                } else {
                     echo "invalid";
                 }
+            } else {
+                echo "invalid";
             }
-        }
-        else {
-            // echo "no account";
+        } else {
+            echo "no account";
         }
     } else {
         echo "invalidcsrf";
