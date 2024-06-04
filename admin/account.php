@@ -74,7 +74,7 @@ include("config.php");
                                     echo 
                                     '
                                     <div class="modal fade" id="update">
-                                        <div class="modal-dialog">
+                                        <div class="modal-dialog shadow">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h1 class="modal-title">Update Account</h1>
@@ -84,16 +84,21 @@ include("config.php");
                                                     <form id="update" method="post">
                                                         <input type="hidden" name="key" value='.$key.'/>
                                                         <input type="hidden" name="token" value='.$token.'/>
+                                                        <input type="hidden" name="id" value='.$admin_id.' />
                                                         <div class="form-floating">
-                                                            <input type="password" name="old_pass" id="old_pass" class="form-control pass" placeholder="Old Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+                                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off"/>
+                                                            <label for="email">Email</label>
+                                                        </div>
+                                                        <div class="form-floating mt-3">
+                                                            <input type="password" name="old_pass" id="old_pass" class="form-control pass" placeholder="Old Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
                                                             <label for="old_pass">Old Password</label>
                                                         </div>
                                                         <div class="form-floating mt-3">
-                                                            <input type="password" name="new_pass" id="new_pass" class="form-control pass" placeholder="New Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+                                                            <input type="password" name="new_pass" id="new_pass" class="form-control pass" placeholder="New Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
                                                             <label for="new_pass">New Password</label>
                                                         </div>
                                                         <div class="form-floating mt-3">
-                                                            <input type="password" name="confirm_pass" id="confirm_pass" class="form-control pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+                                                            <input type="password" name="confirm_pass" id="confirm_pass" class="form-control pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
                                                             <label for="confirm">Confirm Password</label>
                                                         </div>
                                                         <div class="mt-3">
@@ -122,6 +127,7 @@ include("config.php");
     
     <script src="js/script.js"></script>
     <?php include("layout/script.php"); ?>
+    <script src="js/update.js"></script>
     <script>
         function showPassword() {
             var x = document.getElementsByClassName('pass');
@@ -133,70 +139,70 @@ include("config.php");
                     }
                 }
             }
-
-        $(document).ready(function () {
-            $("#update").submit(function (e) {
-                e.preventDefault();
-                var formData = $(this).serialize();
-                    $.ajax({
-                        type: "POST",
-                        url: "update.php",
-                        data: formData,
-                        success: function (response) {
-                            const Toast = Swal.mixin({
-                                toast: true,
-                                position: "top",
-                                customClass: {
-                                    popup: "colored-toast",
-                                },
-                                showConfirmButton: false,
-                                timer: 1000,
-                                timerProgressBar: true,
-                            });
-                            switch (response) {
-                                case "success":
-                                    Toast.fire({
-                                        icon: "success",
-                                        title: "Updated successfully.",
-                                        iconColor: "#28a745",
-                                    }).then(() => {
-                                        var delay = 100;
-                                        setTimeout(function () {
+            // $(document).ready(function () {
+                $("#update").submit(function (e) {
+                    e.preventDefault();
+                    var adminData = $(this).serialize();
+                        $.ajax({
+                            type: "POST",
+                            url: "update.php",
+                            data: adminData,
+                            success: function (response) {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: "top",
+                                    customClass: {
+                                        popup: "colored-toast",
+                                    },
+                                    showConfirmButton: false,
+                                    timer: 10000,
+                                    timerProgressBar: true,
+                                });
+                                switch (response) {
+                                    case "success":
+                                        Toast.fire({
+                                            icon: "success",
+                                            title: "Updated successfully.",
+                                            iconColor: "#28a745",
+                                            width: "32em",
+                                        }).then(() => {
+                                            var delay = 100;
+                                            setTimeout(function () {
+                                                location.reload();
+                                            }, delay);
+                                        });
+                                        break;
+                                    case "invalid password":
+                                        Toast.fire({
+                                            icon: "error",
+                                            title: "Invalid input. Please try again.",
+                                            iconColor: "#dc3545",
+                                        }).then(() => {
                                             location.reload();
-                                        }, delay);
-                                    });
-                                    break;
-                                case "invalid":
-                                    Toast.fire({
-                                        icon: "error",
-                                        title: "Invalid input. Please try again.",
-                                        iconColor: "#dc3545",
-                                    }).then(() => {
-                                        location.reload();
-                                    });
-                                    break;
-                                case "error":
-                                    Toast.fire({
-                                        icon: "error",
-                                        title: "Can't update. Please try again.",
-                                        iconColor: "#dc3545",
-                                    }).then(() => {
-                                        location.reload();
-                                    });
-                                    break;
-                                default:
-                                    Toast.fire({
-                                        icon: "error",
-                                        title: "something went wrong!",
-                                        iconColor: "#dc3545",
-                                    }).then(() => {
-                                        location.reload();
-                                    });
-                            }
-                        },
+                                        });
+                                        break;
+                                    // case "error":
+                                    //     Toast.fire({
+                                    //         icon: "error",
+                                    //         title: "Can't update. Please try again.",
+                                    //         iconColor: "#dc3545",
+                                    //     }).then(() => {
+                                    //         location.reload();
+                                    //     });
+                                    //     break;
+                                    default:
+                                        Toast.fire({
+                                            icon: "error",
+                                            title: response,
+                                            iconColor: "#dc3545",
+                                        }).then(() => {
+                                            location.reload();
+                                        });
+                                }
+                            },
+                        });
                     });
                 });
-            });
     </script>
 </body>
 </html>

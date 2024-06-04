@@ -19,6 +19,10 @@ function redirect($location) {
     exit();
 }
 
+if(!isset($_SESSION['id'])) {
+    redirect('login.php');
+}
+
 $admin_id = htmlspecialchars($_SESSION['id']);
 
 try {
