@@ -19,7 +19,7 @@ include("csrfToken.php");
         <h1 class="fw-bold"><span class="green">Birthday</span> - Casual</h1>
         <input type="hidden" name="key" value="<?php echo $key; ?>">
         <input type="hidden" name="token" value="<?php echo $token; ?>">
-        <input type="hidden" name="event" value="Birthday Casual">
+        <input type="hidden" name="event" id="subject" value="Birthday Casual">
             <div class="row">
                 <div class="form-floating col-12 col-md-4 mt-3">
                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off" required>
@@ -69,11 +69,10 @@ include("csrfToken.php");
         </div>
     </div>
 <?php include("layout/footer.php") ?>
-<?php include("./layout/script.php") ?>
+<?php include("../layout/script.php") ?>
 <script src="../layout/index.js"></script>
 </body>
 </html>
-
 <script>
     $(document).ready(function() {
         $("#bc").submit(function(e) {

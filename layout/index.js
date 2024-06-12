@@ -162,8 +162,8 @@ function handleOptions(options,url){
         return JSON.stringify(url)=== "{}";
     }
 
-    opt.innerHTML=inp;
-    opt.setAttribute("class","opt link");
+    // opt.innerHTML=inp;
+    // opt.setAttribute("class","opt link");
     cbot.appendChild(opt);
     handleScroll();
 }

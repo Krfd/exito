@@ -40,8 +40,70 @@
             <ul class="list-unstyled d-flex justify-content-evenly align-items-center text-uppercase">
                 <li class="list-item"><a href="home.php" class="text-decoration-none text-white">Home</a></li>
                 <li class="list-item"><a href="about.php" class="text-decoration-none text-white">About Us</a></li>
-                <li class="list-item"><a href="contact.php" class="text-decoration-none text-white">Contact</a></li>
-                <li class="list-item"><a href="support.php" class="text-decoration-none text-white">Support</a></li>
+                <li class="list-item text-uppercase"><a href="#" data-bs-toggle="modal" data-bs-target="#privacy" class="text-decoration-none text-white">Privacy Policy</a></li>
+                <div class="modal fade" id="privacy">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fw-bold">Privacy Policy</h1>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><span class="fw-bold">Exito Catering Services</span> is commited to protecting your privacy. This privacy policy explains how your personal information is collected, used, and disclosed by the management. This privacy policy applies to our website, and its associated subdomains alongside our application. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this <span class="fw-bold">Privacy Policy</span> and <span class="fw-bold">Terms of Service</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <li class="list-item text-uppercase"><a href="#" class="text-decoration-none text-white" data-bs-toggle="modal" data-bs-target="#terms">Terms</a></li>
+                <div class="modal fade" id="terms">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fw-bold">Terms &amp; Condition</h1>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>By accessing this website we
+                                        assume you accept these terms
+                                        and conditions. Do not continue
+                                        to use this website if you do not agree
+                                        to take all of the terms and
+                                        conditions stated on this page.</p>
+                                        <p>The following terminology
+                                        applies to these Terms and
+                                        Conditions, Privacy Statement
+                                        and Disclaimer Notice and all
+                                        Agreements: "Client", "You" and
+                                        "Your" refers to you, the person
+                                        log on this website and
+                                        compliant to the Company's terms
+                                        and conditions. "The Company",
+                                        "Ourselves", "We", "Our" and
+                                        "Us", refers to our Company.
+                                        "Party", "Parties", or "Us",
+                                        refers to both the Client and
+                                        ourselves. All terms refer to
+                                        the offer, acceptance and
+                                        consideration of payment
+                                        necessary to undertake the
+                                        process of our assistance to the
+                                        Client in the most appropriate
+                                        manner for the express purpose
+                                        of meeting the Client's needs in
+                                        respect of provision of the
+                                        Company's stated services, in
+                                        accordance with and subject to,
+                                        prevailing law of the Philippines.
+                                        Any use of the above terminology
+                                        or other words in the singular,
+                                        plural, capitalization and/or
+                                        he/she or they, are taken as
+                                        interchangeable and therefore as
+                                        referring to same.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </ul>
         </div>
     </div>
