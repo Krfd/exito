@@ -22,7 +22,7 @@
 
             </div>
             <div class="chatbot-footer">
-                <span class="text-dark">Powered by @Exito</span>
+                <span class="text-dark">Exito Catering Services</span>
             </div>
         </div>
     </div>

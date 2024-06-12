@@ -13,7 +13,7 @@ include("csrfToken.php");
 </head>
 <body>
 <?php include("layout/navbar.php") ?>
-<?php include("./layout/bot.php") ?>
+<?php include("../layout/bot.php") ?>
     <div class="container d-flex flex-column flex-lg-row py-5">
         <form id="cd" method="post" class="d-block mx-auto col-12 col-lg-8">
         <h1 class="fw-bold"><span class="green">Corporate</span> - Deluxe</h1>
@@ -71,7 +71,7 @@ include("csrfToken.php");
     </div>
 <?php include("layout/footer.php") ?>
 <?php include("./layout/script.php") ?>
-<script src="./layout/index.js"></script>
+<script src="../layout/index.js"></script>
 </body>
 </html>
 <script>
