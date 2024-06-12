@@ -78,7 +78,7 @@
             <img src="assets/pork/teriyaki.jpeg" alt="Pork Teriyaki" class="w-100 object-fit-cover rounded-3 menu mb-2" style="height: 250px">
                 <h3 class="fw-semibold text-center">Pork Teriyaki</h3>
         </div>
-        <div class="w-100 rounded-3 shadow p-3">
+        <div class="w-100 rounded-3 shadow p-3" data-aos="fade-up">
             <img src="assets/pork/menudo.jpeg" alt="Menudo" class="w-100 object-fit-cover rounded-3 menu mb-2" style="height: 250px">
                 <h3 class="fw-semibold text-center">Menudo</h3>
         </div>

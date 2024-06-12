@@ -120,8 +120,8 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5 discover" data-aos="fade-up">
-        <div class="container p-5 text-center light">
+    <div class="container-fluid py-5 discover">
+        <div class="container p-5 text-center light" data-aos="fade-up">
             <h2 class="fw-semibold display-4">
                 Discover
             </h2>
