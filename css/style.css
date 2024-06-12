@@ -138,7 +138,7 @@ body {
 }
 #test {
     position: fixed;
-    margin: 35px 25px;
+    margin: -35px 25px;
     z-index: 100;
     top: 14rem;
     right: 0;
@@ -458,6 +458,14 @@ body {
     .dish-img {
         min-height: 50%;
     }
+    #test {
+        position: fixed;
+        margin: -100px 25px;
+        z-index: 100;
+        top: 14rem;
+        right: 0;
+        display: none;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -466,6 +474,14 @@ body {
     .person-icon {
         height: auto;
         width: 50px !important;
+    }
+    #test {
+        position: fixed;
+        margin: -0px 25px;
+        z-index: 100;
+        top: 14rem;
+        right: 0;
+        display: none;
     }
 }
 
@@ -476,12 +492,36 @@ body {
         height: auto;
         width: 50px !important;
     }
+    #test {
+        position: fixed;
+        margin: -0px 25px;
+        z-index: 100;
+        top: 14rem;
+        right: 0;
+        display: none;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #test {
+        position: fixed;
+        margin: -40px 25px;
+        z-index: 100;
+        top: 14rem;
+        right: 0;
+        display: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    #test {
+        position: fixed;
+        margin: -40px 25px;
+        z-index: 100;
+        top: 14rem;
+        right: 0;
+        display: none;
+    }
 }
