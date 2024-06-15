@@ -19,7 +19,7 @@ include("csrfToken.php");
         <h1 class="fw-bold"><span class="green">Party</span> - Casual</h1>
         <input type="hidden" name="key" value="<?php echo $key ?>">
         <input type="hidden" name="token" value="<?php echo $token ?>">
-        <input type="hidden" name="event" value="Party Casual">
+        <input type="hidden" name="event" value="Party - Casual">
             <div class="row">
                 <div class="form-floating col-12 col-md-4 mt-3">
                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" autocomplete="off" required>

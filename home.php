@@ -93,7 +93,7 @@
         </div>
     </div>
     
-    <div class="ingredients text-center py-5 light">
+    <div class="ingredients text-center py-3 py-md-5 light">
         <div class="container my-3 py-5" data-aos="fade-up">
         <h2 class="fw-bold display-4">The Best Ingredients</h2>
         <p>We take an enormous amount of pride in sourcing our ingredients carefully to ensure that the flavors of our food are as delicious and authentic as possible. 
@@ -105,7 +105,7 @@
         </div>
     </div>
     
-    <div class="container-fluid py-5 chef">
+    <div class="container-fluid pb-5 chef">
         <div class="container">
             <div class="p-5 text-center light">
                 <h2 class="fw-semibold display-4">Our Chefs</h2>

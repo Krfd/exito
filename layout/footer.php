@@ -39,7 +39,53 @@
         <div>
             <ul class="list-unstyled d-flex justify-content-evenly align-items-center">
                 <li class="list-item text-uppercase"><a href="home.php" class="text-decoration-none text-white">Home</a></li>
-                <li class="list-item text-uppercase"><a href="about.php" class="text-decoration-none text-white">About Us</a></li>
+                <li class="list-item text-uppercase"><a href="#" data-bs-toggle="modal" data-bs-target="#faqs" class="text-decoration-none text-white">Faqs</a></li>
+                <div class="modal fade" id="faqs">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fw-bold">Frequently Asked Questions</h1>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container p-5">
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">Are there hidden charges in each deal?</h2>
+                                        <p>It depends. For instance if the client would like to request extra (dish or beverage) or any part of our service that's not covered from the booking then that's the moment where the management will charge another fees.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">Can we change or customize the foods even after booking?</h2>
+                                        <p>If there is no specified choices of dished from customer, the management will provide their best tasting dishes. However, for other requests and customization please don't hesitate to inform us via email or other contact details we provide. Please avoid using our AI agent for particular modification from your reservation as its only purpose is to provide you the information you need from us.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">How can we ensure that your service is reliable?</h2>
+                                        <p>For more reference please visit our page to see positive feedbacks that will boosts your confidence upon trusting us. You may also visit our social media accounts as a proof of authenticity and reliability.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">How can we track the arrival of your service?</h2>
+                                        <p>Don't be worried, the management will come in stay in every process of the event. Our team is always prepared on time and early as possible from the expected time to give you a memorable experience.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">How about the setup?</h2>
+                                        <p>Set aside all your worries as our management will keep in touch regarding with everything you need to know about your bookings and until the day of the event.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">What are the money-back guarantee conditions?</h2>
+                                        <p>There is a money-back guarantee once you cancelled your reservation is not yet approved by the management. However, when the management has already approved your request, there is only 75% money-back guarantee as a consideration from the management.</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">What are the warranty conditions?</h2>
+                                        <p>If our dishes contain any spoiled ingredient, we will give you a partial refund (depending on the cause).</p>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h2 class="fw-bold">The catering service got delayed upon arrival. Is there a warranty?</h2>
+                                        <p>If the service got delayed for 10-15 minutes during the event, the client may request to get a 25% refund with additional dish and beverage to be followed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <li class="list-item text-uppercase"><a href="#" data-bs-toggle="modal" data-bs-target="#privacy" class="text-decoration-none text-white">Privacy Policy</a></li>
                 <div class="modal fade" id="privacy">
                     <div class="modal-dialog modal-lg">
