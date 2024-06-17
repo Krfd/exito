@@ -111,7 +111,7 @@
                     <div class="carousel-item active">
                         <img src="./assets/carousel/sauteed.jpeg" alt="Sauteed" class="d-block object-fit-cover" style="width:100%">
                         <div class="carousel-caption text-white">
-                            <h3>New Sauteed Salad</h3>
+                            <h3>Sauteed Salad</h3>
                             <p>Try our new Sauteed Salad with sweet corn</p>
                         </div>
                     </div>

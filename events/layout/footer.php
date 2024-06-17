@@ -9,7 +9,7 @@
                     <i class="fa-solid fa-phone"></i> <span>+639 456 2387 456</span>
                     <br>
                     <i class="fa-solid fa-envelope"></i>
-                    <span>exitocatering@gmail.com</span>
+                    <a href="mailto:alexa.nexgen08@gmail.com" class="text-decoration-none text-dark">exitocatering@gmail.com</a>
             </div>
         </div>
         <div class="center-content text-center mt-5 mt-md-0">
@@ -27,9 +27,9 @@
         <div class="right-content mt-5 mt-md-0">
             <h5 class="fw-bold text-uppercase text-center">Follow</h5>
             <ul class="list-unstyled d-flex justify-content-center justify-content-md-between gap-3">
-                <li><a href="facebook.com" class="text-dark"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="instagram.com" class="text-dark"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="twitter.com" class="text-dark"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" class="text-dark"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank" class="text-dark"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank" class="text-dark"><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
         </div>
     </div>
