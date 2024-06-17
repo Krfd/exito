@@ -5,6 +5,7 @@ $(document).ready(function () {
 
         Swal.fire({
             title: "Approve this reservation?",
+            text: "This action cannot be change.",
             icon: "question",
             showCancelButton: true,
             confirmButtonText: "Approve",
@@ -54,7 +55,7 @@ $(document).ready(function () {
                             default:
                                 Toast.fire({
                                     icon: "error",
-                                    title: "Something went wrong!",
+                                    title: "Something went wrong",
                                     iconColor: "#dc3545",
                                 }).then(() => {
                                     location.reload();

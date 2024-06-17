@@ -26,7 +26,7 @@ $(document).ready(function () {
                                 popup: "colored-toast",
                             },
                             showConfirmButton: false,
-                            timer: 1000,
+                            timer: 10000,
                             timerProgressBar: true,
                         });
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
                             default:
                                 Toast.fire({
                                     icon: "error",
-                                    title: response,
+                                    title: "Something went wrong",
                                     iconColor: "#dc3545",
                                 }).then(() => {
                                     location.reload();

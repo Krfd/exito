@@ -36,7 +36,7 @@
     <div class="container">
         <small class="text-center"><i>&copy; <?php date("Y"); ?>. All Rights Reserved.</i></small>
         <hr class="text-white">
-        <div>
+        <div id="footer-links">
             <ul class="list-unstyled d-flex justify-content-evenly align-items-center">
                 <li class="list-item text-uppercase"><a href="home.php" class="text-decoration-none text-white">Home</a></li>
                 <li class="list-item text-uppercase"><a href="#" data-bs-toggle="modal" data-bs-target="#faqs" class="text-decoration-none text-white">Faqs</a></li>

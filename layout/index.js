@@ -1,7 +1,7 @@
 var data= {
     chatinit:{
         title: ["Hello! My name is <span class='fw-bold'>James</span> and I am your chatbot assistance", "How can I help you?"],
-        options: ["Pricing 💰","Location","Services","Dishes 🍴", "Terms", "Warranty"]
+        options: ["Pricing 💰","Location","Services","Dishes 🍴", "Terms 🤝", "Warranty ❓"]
     },
     pricing: {
         title:["Our price varies on the event or party you would like to book. We have 3 options in every occasion from budget-friendly to expensive one. However, if you would like to see our services, please click the link below."],
@@ -33,17 +33,17 @@ var data= {
         }
     },
     terms: {
-        title:[""],
-        options:[''],
+        title:["By accessing the website, the management assume you accept these terms and conditions. Do not continue to use this website if you do not agree to take all of the terms and conditions stated on this page.", "The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: 'Client', 'You' and 'Your' refers to you, the person log on this website and compliant to the Company's terms and conditions. 'The Company', 'Ourselves', 'We', 'Our' and 'Us', refers to our Company. 'Party', 'Parties', or 'Us', refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of the Philippines. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same."],
+        options:['View Terms and Conditions'],
         url : {
-            link:[""]
+            link:["#footer-links"]
         }
     },
     warranty: {
-        title:[""],
-        options:[''],
+        title:["Warranty only applies on certain situations such as delay of service, failure of service, lack of organization by the management, or any unwanted services that is qualified in our terms and conditions under warranty sections.", "There is a 100% refund for reservation that is not yet approved by the management. However, for reservation that has been approved, only 75% money-back guarantee is applied."],
+        options:['View Frequently Asked Questions'],
         url : {
-            link:[""]
+            link:["#footer-links"]
         }
     },
 }
