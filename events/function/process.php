@@ -78,7 +78,7 @@ try {
                 <br><br><br>
                 <strong>Note: As a part of your transaction, We encourage you to prepare your balance on the day of the event.</strong>
                 <br><br><br>
-                However, if you did not book this reservation, we require your immediate response to this email. <br><br><br>The management.";
+                However, if you did not book this reservation, we require your immediate response to this email. <br><br><br><strong>The management</strong>.";
 
                 $mail->send();
 

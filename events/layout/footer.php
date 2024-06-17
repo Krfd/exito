@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="container">
-        <small class="text-center"><i>&copy; 2024. All Rights Reserved.</i></small>
+        <small class="text-center"><i>&copy; <?php date("Y"); ?>. All Rights Reserved.</i></small>
         <hr class="text-white">
         <div>
             <ul class="list-unstyled d-flex justify-content-evenly align-items-center text-uppercase">

@@ -1,7 +1,7 @@
 var data= {
     chatinit:{
         title: ["Hello! My name is <span class='fw-bold'>James</span> and I am your chatbot assistance", "How can I help you?"],
-        options: ["Pricing 💰","Location","Services","Dishes 🍴"]
+        options: ["Pricing 💰","Location","Services","Dishes 🍴", "Terms", "Warranty"]
     },
     pricing: {
         title:["Our price varies on the event or party you would like to book. We have 3 options in every occasion from budget-friendly to expensive one. However, if you would like to see our services, please click the link below."],
@@ -30,6 +30,20 @@ var data= {
         options:['Beef','Pork','Chicken','Seafoods','More'],
         url : {
             link:["beef.php","pork.php","chicken.php","seafoods.php","services.php"]
+        }
+    },
+    terms: {
+        title:[""],
+        options:[''],
+        url : {
+            link:[""]
+        }
+    },
+    warranty: {
+        title:[""],
+        options:[''],
+        url : {
+            link:[""]
         }
     },
 }

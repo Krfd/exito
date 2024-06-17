@@ -263,6 +263,9 @@ body {
 .grey {
     color: rgb(199, 199, 199);
 }
+.carousel-container {
+    width: 50%;
+}
 .ingredients {
     background-color: #141414;
 }
@@ -450,6 +453,9 @@ body {
     .icon {
         font-size: 2rem !important;
     }
+    .carousel-container {
+        width: 100%;
+    }
     /* ABOUT */
     .about {
         width: 100%;
@@ -475,6 +481,9 @@ body {
         height: auto;
         width: 50px !important;
     }
+    .carousel-container {
+        width: 100%;
+    }
     #test {
         position: fixed;
         margin: -0px 25px;
@@ -492,6 +501,9 @@ body {
         height: auto;
         width: 50px !important;
     }
+    .carousel-container {
+        width: 100%;
+    }
     #test {
         position: fixed;
         margin: -0px 25px;
@@ -504,6 +516,9 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .carousel-container {
+        width: 50%;
+    }
     #test {
         position: fixed;
         margin: -40px 25px;
@@ -516,6 +531,9 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .carousel-container {
+        width: 50%;
+    }
     #test {
         position: fixed;
         margin: -40px 25px;

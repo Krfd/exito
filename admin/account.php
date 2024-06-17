@@ -64,9 +64,9 @@ include("config.php");
                                         <td>'.$updated.'</td>
                                         <td>';
                                         if($id != $admin_id) {
-                                            echo '<button type="button" disabled class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button>';
+                                            echo '<button type="button" disabled class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update"><i class="fa-solid fa-key"></i></button>';
                                         } else {
-                                            echo '<button type="button" class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button>';
+                                            echo '<button type="button" class="btn btn-sm rounded text-center btn-primary" data-bs-toggle="modal" data-bs-target="#update"><i class="fa-solid fa-key"></i></button>';
                                         }
                                         echo '</td>
                                     </tr>';
@@ -81,24 +81,20 @@ include("config.php");
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form id="update" method="post">
+                                                    <form id="updateAccount" method="post">
                                                         <input type="hidden" name="key" value='.$key.'/>
                                                         <input type="hidden" name="token" value='.$token.'/>
                                                         <input type="hidden" name="id" value='.$admin_id.' />
-                                                        <div class="form-floating">
-                                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off"/>
-                                                            <label for="email">Email</label>
-                                                        </div>
                                                         <div class="form-floating mt-3">
-                                                            <input type="password" name="old_pass" id="old_pass" class="form-control pass" placeholder="Old Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
+                                                            <input type="password" name="old_pass" id="old_pass" class="form-control pass" placeholder="Old Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off" required/>
                                                             <label for="old_pass">Old Password</label>
                                                         </div>
                                                         <div class="form-floating mt-3">
-                                                            <input type="password" name="new_pass" id="new_pass" class="form-control pass" placeholder="New Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
+                                                            <input type="password" name="new_pass" id="new_pass" class="form-control pass" placeholder="New Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off" required/>
                                                             <label for="new_pass">New Password</label>
                                                         </div>
                                                         <div class="form-floating mt-3">
-                                                            <input type="password" name="confirm_pass" id="confirm_pass" class="form-control pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off"/>
+                                                            <input type="password" name="confirm_pass" id="confirm_pass" class="form-control pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off" required/>
                                                             <label for="confirm">Confirm Password</label>
                                                         </div>
                                                         <div class="mt-3">
@@ -139,8 +135,8 @@ include("config.php");
                     }
                 }
             }
-            // $(document).ready(function () {
-                $("#update").submit(function (e) {
+            $(document).ready(function () {
+                $("#updateAccount").submit(function (e) {
                     e.preventDefault();
                     var adminData = $(this).serialize();
                         $.ajax({
@@ -155,7 +151,7 @@ include("config.php");
                                         popup: "colored-toast",
                                     },
                                     showConfirmButton: false,
-                                    timer: 10000,
+                                    timer: 1000,
                                     timerProgressBar: true,
                                 });
                                 switch (response) {
@@ -175,21 +171,21 @@ include("config.php");
                                     case "invalid password":
                                         Toast.fire({
                                             icon: "error",
-                                            title: "Invalid input. Please try again.",
+                                            title: "Invalid password. Please try again.",
                                             iconColor: "#dc3545",
                                         }).then(() => {
                                             location.reload();
                                         });
                                         break;
-                                    // case "error":
-                                    //     Toast.fire({
-                                    //         icon: "error",
-                                    //         title: "Can't update. Please try again.",
-                                    //         iconColor: "#dc3545",
-                                    //     }).then(() => {
-                                    //         location.reload();
-                                    //     });
-                                    //     break;
+                                    case "unmatched":
+                                        Toast.fire({
+                                            icon: "error",
+                                            title: "Password unmatched. Please try again.",
+                                            iconColor: "#dc3545",
+                                        }).then(() => {
+                                            location.reload();
+                                        });
+                                        break;
                                     default:
                                         Toast.fire({
                                             icon: "error",

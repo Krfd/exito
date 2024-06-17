@@ -63,6 +63,69 @@
                 </div>
             </div>
         </div>
+        <div class="container py-5 carousel-container">
+            <h2 class="display-1 text-center text-secondary">New Offerings</h2>
+            <p class="text-center text-secondary">Try what's new we can offer to your special occasion.</p>
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide my-5" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                <div class="carousel-item">
+                        <img src="./assets/carousel/nachos.jpeg" alt="Nachos" class="d-block object-fit-cover" style="width:100%">
+                        <div class="carousel-caption text-white">
+                            <h3>Nachos</h3>
+                            <p>Try our new Nachos Overload!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/carousel/lumpia.jpg" alt="Lumpia" class="d-block object-fit-cover" style="width:100%">
+                        <div class="carousel-caption text-white">
+                            <h3>Shanghai</h3>
+                            <p>New Lumpia Shanghai</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/carousel/sotanghon.jpeg" alt="Sotanghon" class="d-block object-fit-cover" style="width:100%">
+                        <div class="carousel-caption text-white">
+                            <h3>Sotanghon Soup</h3>
+                            <p>Quality and affordable Sotanghon Soup</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/carousel/tempura.jpeg" alt="Tempura" class="d-block object-fit-cover" style="width:100%">
+                        <div class="carousel-caption text-white">
+                            <h3>Tempura</h3>
+                            <p>Best tasting Fresh Tempura!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="./assets/carousel/sauteed.jpeg" alt="Sauteed" class="d-block object-fit-cover" style="width:100%">
+                        <div class="carousel-caption text-white">
+                            <h3>New Sauteed Salad</h3>
+                            <p>Try our new Sauteed Salad with sweet corn</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+    </div>
     </div>
     <div class="container-fluid icon-container py-5">
         <div class="container d-flex flex-column flex-md-row gap-5 gap-md-3 justify-content-evenly align-items-center py-5">
