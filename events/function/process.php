@@ -44,7 +44,7 @@ try {
             if($book == TRUE) {
 
                 if($message == "") {
-                    $message = "No message"
+                    $message = "No message";
                 }
 
                 $date = date('M. d, Y - D', strtotime($date));
