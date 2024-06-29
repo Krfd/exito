@@ -122,6 +122,7 @@ include("config.php");
     </div>
     
     <script src="js/script.js"></script>
+    <script src="js/time.js"></script>
     <?php include("layout/script.php"); ?>
     <script src="js/update.js"></script>
     <script>
