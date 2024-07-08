@@ -82,7 +82,7 @@ include("config.php");
                                         <td>'.$price.'</td>
                                         <td>';
                                         if($message == '' || $message == null) {
-                                            echo "Empty";
+                                            echo "<i class='fw-bold'>N/A</i>";
                                         } else {
                                             echo $message;
                                         }

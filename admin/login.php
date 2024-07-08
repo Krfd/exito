@@ -68,7 +68,7 @@
                                         confirmButtonColor: "#67CC65",
                                         confirmButtonText: "Continue",
                                     }).then(() => {
-                                        window.location.href = "requests.php"
+                                        window.location.href = "analytics.php"
                                     })
                             break;
                             case "invalid": 

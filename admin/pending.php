@@ -55,6 +55,12 @@ include("config.php");
                                     $day = date('M. d, Y - D', strtotime($day = $req['event_date']));
                                     $hr = date('h:i A', strtotime($hr = $req['event_time']));
 
+                                    if($message == '' || $message == null) {
+                                        $message = "<i class='fw-bold'>N/A</i>";
+                                    } else {
+                                        $message;
+                                    }
+
                                     echo 
                                     '<tr>
                                         <td>'.$id.'</td>

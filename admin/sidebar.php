@@ -10,6 +10,12 @@
             <ul class="sidebar-nav">
                 <hr class="text-white">
                 <li class="sidebar-item">
+                    <a href="analytics.php" class="sidebar-link">
+                    <i class="fa-solid fa-chart-line icon"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a href="requests.php" class="sidebar-link">
                     <i class="fa-solid fa-bell-concierge icon"></i>
                         <span>Requests</span>
