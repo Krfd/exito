@@ -35,7 +35,7 @@ include("config.php");
                     </thead>
                     <tbody>
                         <?php
-                            $res = $conn->prepare("SELECT * FROM reservation WHERE status = 'Done'");
+                            $res = $conn->prepare("SELECT * FROM reservation WHERE status = 'Fully Paid'");
                             $res->execute();
 
                             $book = $res->fetchAll(PDO::FETCH_ASSOC);

@@ -27,9 +27,10 @@ if (isset($_GET['id'])) {
         $event = $row['event'];
 
         $balance = $price - ($price / 2);
+
     }
 
-    $reserve = "UPDATE reservation SET is_approve = 1, status = 'Approved' WHERE id = $id";
+    $reserve = "UPDATE reservation SET is_approve = 1, status = 'Approved', date_approved = DATE(CURDATE()) WHERE id = $id";
     $conn->exec($reserve);
 
     $check_status = "SELECT status FROM reservation WHERE id = $res_id";

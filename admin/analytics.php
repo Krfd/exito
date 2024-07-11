@@ -28,7 +28,7 @@ include("config.php");
                         <div class="fw-bold mb-0">
                             <?php
 
-                            $total = $conn->prepare("SELECT COUNT(id) FROM reservation WHERE status = 'Done'");
+                            $total = $conn->prepare("SELECT COUNT(id) FROM reservation WHERE status = 'Fully Paid'");
                             $total->execute();
 
                             $totalBooked = $total->fetch(PDO::FETCH_ASSOC);
@@ -38,7 +38,8 @@ include("config.php");
                         </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fa-solid fa-bookmark fa-3x text-secondary"></i>
+                        <!-- <i class="fa-solid fa-bookmark fa-3x text-secondary"></i> -->
+                        <i class="fa-solid fa-users fa-3x text-secondary"></i>
                     </div>
                 </div>
                 <div class="col shadow-sm p-3 d-flex border-start border-primary border-5 rounded-3 mt-3 mt-md-0">
@@ -106,11 +107,17 @@ include("config.php");
                         <div class="fw-bold mb-0">
                             <?php
 
-                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE status = 'Done'");
+                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE status = 'Fully Paid'");
                             $total->execute();
 
                             $totalBooked = $total->fetch(PDO::FETCH_ASSOC);
-                            echo "₱ ". substr($totalBooked['SUM(price)'], 0, 3) . ","  . substr($totalBooked['SUM(price)'], 3);
+                            // echo "₱ ". substr($totalBooked['SUM(price)'], 0, 3) . ","  . substr($totalBooked['SUM(price)'], 3);
+
+                            if(strlen($totalBooked['SUM(price)']) > 5) {
+                                echo "₱ ". substr($totalBooked['SUM(price)'], 0, 3) . ","  . substr($totalBooked['SUM(price)'], 3);
+                            } else if(strlen($totalBooked['SUM(price)']) > 4) {
+                                echo "₱ ". substr($totalBooked['SUM(price)'], 0, 2) . ","  . substr($totalBooked['SUM(price)'], 2);
+                            } else echo "₱ ". "0";
 
                             ?>
                         </div>
@@ -125,11 +132,17 @@ include("config.php");
                         <div class="fw-bold mb-0">
                             <?php
 
-                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE MONTH(DATE(created)) = MONTH(DATE(CURDATE())) AND status = 'Done'");
+                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE MONTH(DATE(date_approved)) = MONTH(DATE(CURDATE())) AND status = 'Fully Paid'");
                             $total->execute();
 
                             $monthlyTotal = $total->fetch(PDO::FETCH_ASSOC);
-                            echo "₱ ". substr($monthlyTotal['SUM(price)'], 0, 3) . ","  . substr($monthlyTotal['SUM(price)'], 3);
+                            // echo "₱ ". substr($monthlyTotal['SUM(price)'], 0, 3) . ","  . substr($monthlyTotal['SUM(price)'], 3);
+
+                            if(strlen($monthlyTotal['SUM(price)']) > 5) {
+                                echo "₱ ". substr($monthlyTotal['SUM(price)'], 0, 3) . ","  . substr($monthlyTotal['SUM(price)'], 3);
+                            } else if(strlen($monthlyTotal['SUM(price)']) > 4) {
+                                echo "₱ ". substr($monthlyTotal['SUM(price)'], 0, 2) . ","  . substr($monthlyTotal['SUM(price)'], 2);
+                            } else echo "₱ ". "0";
 
                             ?>
                         </div>
@@ -144,11 +157,20 @@ include("config.php");
                         <div class="fw-bold mb-0">
                             <?php
 
-                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE WEEK(DATE(created)) = WEEK(DATE(CURDATE())) AND status = 'Done'");
+                            $total = $conn->prepare("SELECT SUM(price) FROM reservation WHERE WEEK(DATE(date_approved)) = WEEK(DATE(CURDATE())) AND status = 'Fully Paid'");
                             $total->execute();
 
                             $weeklyTotal = $total->fetch(PDO::FETCH_ASSOC);
-                            echo "₱ ". substr($weeklyTotal['SUM(price)'], 0, 3) . ","  . substr($weeklyTotal['SUM(price)'], 3);
+
+                            if(strlen($weeklyTotal['SUM(price)']) > 5) {
+                                echo "₱ ". substr($weeklyTotal['SUM(price)'], 0, 3) . ","  . substr($weeklyTotal['SUM(price)'], 3);
+                            } else if(strlen($weeklyTotal['SUM(price)']) > 4) {
+                                echo "₱ ". substr($weeklyTotal['SUM(price)'], 0, 2) . ","  . substr($weeklyTotal['SUM(price)'], 2);
+                            } else echo "₱ ". "0";
+                            
+                            // else if(strlen($weeklyTotal['SUM(price)']) < 3 || $weeklyTotal['SUM(price)'] == 0 || $weeklyTotal['SUM(price)'] == "") {
+                            //     echo "₱ ". "0";
+                            // }
 
                             ?>
                         </div>
@@ -173,8 +195,8 @@ include("config.php");
                                 echo "₱ ". substr($pending, 0, 3) . ","  . substr($pending, 3);
                             } else if(strlen($pending) > 4) {
                                 echo "₱ ". substr($pending, 0, 2) . ","  . substr($pending, 2);
-                            } else if(strlen($pending) < 3) {
-                                echo "₱ ". $pending;
+                            } else if(strlen($pending) < 3 || $pending == 0 || $pending == "") {
+                                echo "₱ ". "0";
                             }
 
                             ?>
@@ -198,7 +220,7 @@ include("config.php");
                     <canvas id="statusChart"></canvas>
                 </div>
             </div>
-            <div class="mt-5">
+            <!-- <div class="mt-5">
                 <div class="table-responsive h-100">
                     <table class="table table-hover table-striped">
                         <thead>
@@ -207,7 +229,7 @@ include("config.php");
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Status</th>
-                                <th>Date</th>
+                                <th>Date Inquired</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -222,7 +244,7 @@ include("config.php");
                                     $created = date('M. d, Y - h:i A', strtotime($data['created']));
 
                                     switch($data['status']) {
-                                        case "Done":
+                                        case "Fully Paid":
                                             $status = '<span class="badge badge-success">'.$data['status'].'</span>';
                                             break;
                                         case "Approved":
@@ -246,7 +268,7 @@ include("config.php");
                             }
                             else {
                                 echo '<tr>
-                                    <td colspan="10"><i>No Data</i></td>
+                                    <td colspan="10" class="text-center"><i>No Data</i></td>
                                 </tr>';
                             } 
 
@@ -254,6 +276,9 @@ include("config.php");
                         </tbody>
                     </table>
                 </div>
+            </div> -->
+            <div class="text-center">
+                <small><i>Copyright &copy; <?php echo date("Y"); ?>. All rights reserved.</i></small>
             </div>
         </div>
     </div>
@@ -273,7 +298,7 @@ include("config.php");
                     data: {
                         labels: month,
                         datasets: [{    
-                            label: 'Monthly Earnings',
+                            label: 'Monthly Earnings as of <?php echo date("Y") ?>',
                             data: total,
                             backgroundColor: 'rgba(54, 162, 235, 0.2)',
                             borderColor: 'rgba(54, 162, 235, 1)',
@@ -306,7 +331,7 @@ include("config.php");
                     data: {
                         labels: clients,
                         datasets: [{    
-                            label: 'Monthly Client/s',
+                            label: 'Monthly Client/s as of <?php echo date("Y")?>',
                             data: total,
                             backgroundColor: "rgba(0, 255, 0, 0.2)",
                             // borderColor: ['#CB4335', '#1F618D', '#F1C40F', '#27AE60', '#884EA0', '#D35400'],
@@ -328,7 +353,6 @@ include("config.php");
         fetch('statusChart.php')
             .then(response => response.json())
             .then(data => {
-                // const month = data.map(item => item.month);
                 const status = data.map(item => item.status);
                 const count = data.map(item => item.count);
 
@@ -340,7 +364,6 @@ include("config.php");
                         datasets: [{    
                             label: 'Reservation Status',
                             data: count,
-                            // backgroundColor: "rgba(0, 255, 0, 0.2)",
                             backgroundColor: ['rgba(54, 162, 235, .5)', 'rgba(255, 0, 0, .5)', 'rgba(0, 255, 0, .5)', 'rgba(255, 255, 0, .5)', '#884EA0', '#D35400'],
                             borderColor: ['rgba(54, 162, 235, .5)', 'rgba(255, 0, 0, .5)', 'rgba(0, 255, 0, .5)', 'rgba(255, 255, 0, .5)', '#884EA0', '#D35400'],
                             borderWidth: 1
@@ -348,8 +371,15 @@ include("config.php");
                     },
                     options: {
                         scales: {
+                            responsive: true,
                             y: {
                                 beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: "Reservation Status"
                             }
                         }
                     }

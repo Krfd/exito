@@ -21,24 +21,28 @@ $event = htmlspecialchars($_POST['event']);
 $key = htmlspecialchars($_POST['key']);
 $token = hash_hmac('sha256', 'CSRF Booking Token', $key);
 $status = "Pending";
+$date_approved = "0000-00-00";
 
 try {
     if(hash_equals($token, $_POST['token'])) {
-        // Error
+        
+        $formatted_time = date("h:i", strtotime($time));
+        
         if($date <= date("Y-m-d")) {
             echo "invalidTime";
         } else {
-            $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, event, status) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :event, :status)");
+            $book = $conn->prepare("INSERT INTO reservation (name, phone, email, guests, event_date, event_time, price, message, event, status, date_approved) VALUES (:name, :phone, :email, :guests, :event_date, :event_time, :price, :message, :event, :status, :date_approved)");
             $book->bindParam(':name', $name);
             $book->bindParam(':phone', $phone);
             $book->bindParam(':email', $email);
             $book->bindParam(':guests', $guests);
             $book->bindParam(':event_date', $date);
-            $book->bindParam(':event_time', $time);
+            $book->bindParam(':event_time', $formatted_time);
             $book->bindParam(':price', $price);
             $book->bindParam(':message', $message);
             $book->bindParam(':event', $event);
             $book->bindParam(':status', $status);
+            $book->bindParam(':date_approved', $date_approved);
             $book->execute();
 
             if($book == TRUE) {

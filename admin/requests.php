@@ -67,7 +67,7 @@ include("config.php");
                                             <span class="badge bg-danger">'.$status.'</span>
                                             </td>';
                                             break;
-                                        case "Done":
+                                        case "Fully Paid":
                                             $badge = '<td><span class="badge bg-success">'.$status.'</span></td>';
                                         }
 

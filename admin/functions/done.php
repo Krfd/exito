@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
         $email = $row['email'];
     }
 
-    $reserve = "UPDATE reservation SET is_approve = 0, status = 'Done' WHERE id = $id";
+    $reserve = "UPDATE reservation SET is_approve = 0, status = 'Fully Paid' WHERE id = $id";
     $conn->exec($reserve);
 
     $mail = new PHPMailer(true);

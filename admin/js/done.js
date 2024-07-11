@@ -4,7 +4,7 @@ $(document).ready(function () {
         var res_id = $(this).attr("data-id");
 
         Swal.fire({
-            title: "Mark this transaction as done?",
+            title: "Mark this transaction as Fully Paid?",
             text: "This action cannot be undone.",
             icon: "question",
             showCancelButton: true,
